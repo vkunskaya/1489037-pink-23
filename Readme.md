@@ -1,7 +1,7 @@
 # Личный проект «Пинк» 
 
 * Студент: [Ольга Кунская](https://up.htmlacademy.ru/adaptive/23/user/1489037).
-* Наставник: `Неизвестно`.
+* Наставник: [Сергей Зубов](https://htmlacademy.ru/profile/serj).
 
 ---
 
