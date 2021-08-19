@@ -1,0 +1,28 @@
+.button {
+  padding: 13px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.67;
+  color: $base-white;
+  text-align: center;
+  text-transform: uppercase;
+  border: 2px solid $base-green;
+  border-radius: 1px;
+  background-color: $base-green;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $base-darkgreen;
+    border-color: $base-darkgreen;
+  }
+
+  &:active {
+    color: rgba($base-white, 0.3);
+  }
+
+  &:disabled {
+    background-color: $base-grey;
+    border-color: $base-grey;
+  }
+}

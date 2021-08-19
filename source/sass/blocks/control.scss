@@ -1,0 +1,52 @@
+.control {
+  & input:focus ~ &__label::before {
+    border-color: $base-background;
+  }
+
+  & input:active ~ &__label::before {
+    border-color: $base-red;
+  }
+}
+
+.control__label {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.67;
+
+  &::before {
+    content: "";
+    display: block;
+    margin-right: 22px;
+    width: 35px;
+    height: 35px;
+    border: 2px solid $base-grey;
+    background-color: $base-white;
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    &::before {
+      border-color: $base-background;
+    }
+  }
+
+  &:active::before {
+    border-color: $base-red;
+  }
+
+  &--check {
+    &::before {
+      border-radius: 1px;
+    }
+  }
+
+  &--radio {
+    &::before {
+      border-radius: 50%;
+    }
+  }
+}

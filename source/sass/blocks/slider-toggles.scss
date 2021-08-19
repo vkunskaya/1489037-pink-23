@@ -1,0 +1,48 @@
+.slider-toggles {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-toggles__toggle {
+  margin: 0;
+  padding: 0;
+  width: 6px;
+  height: 6px;
+  border: none;
+  border-radius: 50%;
+
+  background-color: $base-background;
+  opacity: 0.3;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+    cursor: pointer;
+  }
+
+  &:active {
+    opacity: 0.1;
+    cursor: pointer;
+  }
+
+  &--current {
+    width: 12px;
+    height: 12px;
+    background: $base-white;
+    border: 3px solid $base-background;
+    opacity: 1;
+
+    &:hover,
+    &:focus,
+    &:active {
+      opacity: 1;
+      cursor: auto;
+    }
+  }
+
+  & + & {
+    margin-left: 19px;
+  }
+}

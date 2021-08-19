@@ -1,0 +1,21 @@
+.produced-by {
+  margin: 0;
+  margin-top: 41px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.29;
+}
+
+.produced-by__logo {
+  margin-left: 15px;
+
+  &:hover path,
+  &:focus path {
+    fill: $base-text;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

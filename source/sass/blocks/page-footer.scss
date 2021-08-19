@@ -1,0 +1,38 @@
+.page-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.page-footer__logo {
+  display: block;
+  text-align: center;
+  line-height: 0;
+
+  &:hover,
+  &:active {
+    cursor: pointer;
+  }
+
+  &:hover path,
+  &:focus path {
+    fill: $base-red;
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    & path {
+      fill: $base-text;
+    }
+
+    & path + path {
+      fill: $base-red;
+    }
+  }
+}
+
+.page-footer__socials {
+  margin-top: 41px;
+}

@@ -1,0 +1,96 @@
+.photo-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.photo-list__item {
+  // add styles
+}
+
+.photo-list__photo-block {
+  margin: 0;
+
+  &--top {
+    // add styles
+  }
+}
+
+.photo-list__photo {
+  display: block;
+  line-height: 0;
+
+  & img {
+    width: 100%;
+    height: auto;
+  }
+
+  &--top {
+    position: relative;
+    left: -20px;
+
+    & img {
+      width: 100vw;
+      height: auto;
+    }
+  }
+}
+
+.photo-list__info {
+  padding: 26px 12px 26px 17px;
+  background-color: $base-grey-background;
+
+  &--top {
+    // add styles
+  }
+}
+
+.photo-list__post-title {
+  margin: 0;
+}
+
+.photo-list__post-time {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 2;
+  text-transform: uppercase;
+}
+
+.photo-list__description {
+  margin: 0;
+  margin-top: 4px;
+}
+
+.photo-list__likes {
+  margin: 0;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+
+  &--top {
+    // add styles
+  }
+
+  & span {
+    font-size: 12px;
+    line-height: 2;
+    color: $base-red;
+    text-transform: uppercase;
+  }
+}
+
+.photo-list__likes-button {
+  margin-right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: url("../img/heart.svg") no-repeat;
+  background-color: $base-transparent;
+  background-position: center center;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

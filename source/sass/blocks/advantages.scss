@@ -1,0 +1,57 @@
+.advantages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $base-grey-background;
+}
+
+.advantages__intro-container {
+  width: 100%;
+  padding-top: 46px;
+  padding-bottom: 46px;
+  clip-path: polygon(0 0, 100% 0, 100% 83%, 0% 100%);
+  background-color: $base-white;
+}
+
+.advantages__intro-text {
+  margin: 0;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.advantages__list {
+  padding-top: 53px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.advantages__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  &:not(:last-child) {
+    margin-bottom: 43px;
+  }
+
+  &:nth-child(3)::after {
+    margin-top: 48px;
+    content: "";
+    display: block;
+    width: 155px;
+    height: 277px;
+    background: url("../img/phone_hello.png") no-repeat;
+    background-size: contain;
+  }
+}
+
+.advantages__title {
+  margin: 0;
+  margin-bottom: 24px;
+  color: $base-black;
+}
+
+.advantages__description {
+  margin: 0;
+}

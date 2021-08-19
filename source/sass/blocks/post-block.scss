@@ -1,0 +1,54 @@
+.post-block {
+  padding-top: 20px;
+  padding-bottom: 41px;
+  background-color: $base-grey-background;
+}
+
+.post-block__photo {
+  // add styles
+}
+
+.post-block__image {
+  // add styles
+}
+
+.post-block__control {
+  // add styles
+
+  &--current {
+    // add styles
+  }
+}
+
+.post-block__range {
+  // add styles
+}
+
+.post-block__buttons-container {
+  margin-top: 38px;
+}
+
+.post-block__submit-button {
+  width: 100%;
+}
+
+.post-block__cancel-button {
+  margin-top: 12px;
+  width: 100%;
+  color: $base-text;
+  border-color: $base-background;
+  opacity: 0.1;
+
+  &:hover,
+  &:focus {
+    color: $base-text;
+    background-color: $base-transparent;
+    opacity: 0.3;
+  }
+
+  &:active {
+    color: $base-white;
+    background-color: $base-background;
+    opacity: 0.3;
+  }
+}

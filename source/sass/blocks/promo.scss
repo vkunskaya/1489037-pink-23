@@ -1,0 +1,29 @@
+.promo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.promo__content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 462px;
+  padding-top: 29px;
+  background: url("../img/phone.png") bottom no-repeat,
+    url("../img/back-tablet.png") top no-repeat;
+  background-size: auto, cover;
+  background-color: $base-background;
+}
+
+.promo__slogan {
+  margin: 0;
+  max-width: 280px;
+  color: $base-white;
+  text-align: center;
+}
+
+.promo__download-shop {
+  width: 100%;
+}
