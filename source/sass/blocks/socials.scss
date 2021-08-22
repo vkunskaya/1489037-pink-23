@@ -1,11 +1,12 @@
 .socials {
+  @include clear-list;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .socials__item {
   display: inline-flex;
-  justify-content: center;
-  align-items: center;
 
   &:not(:last-child) {
     margin-right: 14px;

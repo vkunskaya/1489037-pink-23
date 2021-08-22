@@ -1,6 +1,5 @@
 .photo-list {
-  display: flex;
-  flex-direction: column;
+  @include clear-list;
 }
 
 .photo-list__item {
@@ -19,7 +18,7 @@
   display: block;
   line-height: 0;
 
-  & img {
+  img {
     width: 100%;
     height: auto;
   }
@@ -28,7 +27,7 @@
     position: relative;
     left: -20px;
 
-    & img {
+    img {
       width: 100vw;
       height: auto;
     }
@@ -70,7 +69,7 @@
     // add styles
   }
 
-  & span {
+  span {
     font-size: 12px;
     line-height: 2;
     color: $base-red;

@@ -1,8 +1,10 @@
 .text-field {
-  display: flex;
-  flex-direction: column;
+  span {
+    display: block;
+  }
 
-  & input {
+  input {
+    width: 100%;
     padding: 13px 20px;
     font-size: 18px;
     line-height: 1.67;

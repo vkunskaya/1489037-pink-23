@@ -1,9 +1,9 @@
 .control {
-  & input:focus ~ &__label::before {
+  input:focus ~ &__label::before {
     border-color: $base-background;
   }
 
-  & input:active ~ &__label::before {
+  input:active ~ &__label::before {
     border-color: $base-red;
   }
 }

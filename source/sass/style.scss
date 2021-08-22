@@ -1,6 +1,7 @@
 // Global
 @import "global/fonts.scss";
 @import "global/variables.scss";
+@import "global/mixins.scss";
 @import "global/global.scss";
 
 // Common blocks
@@ -14,6 +15,8 @@
 @import "blocks/text-field.scss";
 @import "blocks/title.scss";
 @import "blocks/textarea.scss";
+@import "blocks/socials.scss";
+
 // Project blocks
 @import "blocks/page.scss";
 @import "blocks/page-header.scss";
@@ -33,5 +36,4 @@
 @import "blocks/promo.scss";
 @import "blocks/reviews-slider.scss";
 @import "blocks/reviews.scss";
-@import "blocks/socials.scss";
 @import "blocks/tariffs.scss";

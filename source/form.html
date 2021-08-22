@@ -33,7 +33,7 @@
           </svg>
         </button>
       </div>
-      <ul class="site-list main-nav__list">
+      <ul class="main-nav__list">
         <li class="main-nav__list-item"><a href="index.html">Главная</a></li>
         <li class="main-nav__list-item"><a href="catalog.html">Фотографии</a></li>
         <li class="main-nav__list-item main-nav__list-item--current"><a>Конкурс</a></li>
@@ -73,7 +73,7 @@
         <fieldset class="contest-form__fieldset contest-form__user-achievements">
           <legend>Ваши безбашенные достижения в путешествии</legend>
           <div class="content-wrapper">
-            <ul class="site-list contest-form__check-list">
+            <ul class="contest-form__check-list">
               <li class="control contest-form__check-item">
                 <input class="visually-hidden" type="checkbox" name="shark" id="shark-selfie" checked>
                 <label for="shark-selfie" class="control__label control__label--check">Сделал селфи с акулой</label>
@@ -119,7 +119,7 @@
         <fieldset class="contest-form__fieldset contest-form__user-platform">
           <legend>С каким приложением путешествовали?</legend>
           <div class="content-wrapper">
-            <ul class="site-list contest-form__radio-list">
+            <ul class="contest-form__radio-list">
               <li class="control contest-form__radio-item">
                 <input class="visually-hidden" type="radio" name="platform" id="ios-platform" checked>
                 <label for="ios-platform" class="control__label control__label--radio">Pink для iOS</label>
@@ -163,7 +163,7 @@
             fill="#D22856" />
         </svg>
       </a>
-      <ul class="site-list socials page-footer__socials">
+      <ul class="socials page-footer__socials">
         <li class="socials__item"><a href="#" class="socials__link" aria-label="Twitter"></a></li>
         <li class="socials__item"><a href="#" class="socials__link" aria-label="Facebook"></a></li>
         <li class="socials__item"><a href="#" class="socials__link" aria-label="Youtube"></a></li>
@@ -189,7 +189,9 @@
         Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
       </p>
     </div>
-    <button class="button modal__button" type="button">Ok</button>
+    <div class="modal__button-wrapper">
+      <button class="button modal__button" type="button">Ok</button>
+    </div>
   </section>
 
 
@@ -200,7 +202,7 @@
         Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.
       </p>
     </div>
-    <div class="modal__button-wrapper">
+    <div class="modal__button-wrapper modal__button-wrapper--big">
       <button class="button modal__button" type="button">Закрыть окно</button>
     </div>
   </section>

@@ -1,7 +1,4 @@
 .modal {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding-top: 44px;
   padding-bottom: 52px;
   background-color: $base-white;
@@ -29,21 +26,28 @@
   text-align: center;
 }
 
+.modal__button {
+  display: block;
+  margin: 50px auto 0;
+  width: 100%;
+}
+
 .modal__button-wrapper {
-  margin-top: 41px;
   display: flex;
   justify-content: center;
   width: 100%;
-  padding: 52px 0;
-  background: $base-grey-background;
   border-radius: 0 0 1px 1px;
+  padding-left: 22px;
+  padding-right: 22px;
 
-  & .modal__button {
-    margin-top: 0;
+  &--big {
+    padding-top: 52px;
+    padding-bottom: 52px;
+    margin-top: 41px;
+    background: $base-grey-background;
+
+    .modal__button {
+      margin: 0 auto;
+    }
   }
-}
-
-.modal__button {
-  margin-top: 50px;
-  width: calc(100% - 44px);
 }

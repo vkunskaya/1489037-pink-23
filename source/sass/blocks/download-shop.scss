@@ -12,6 +12,8 @@
 }
 
 .download-shop__list {
+  @include clear-list;
+  display: flex;
   align-items: center;
   margin-top: 53px;
 }
@@ -25,8 +27,8 @@
     margin-right: 35px;
   }
 
-  & a {
-    display: inline-flex;
+  a {
+    display: block;
   }
 }
 

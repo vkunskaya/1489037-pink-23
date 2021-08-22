@@ -1,8 +1,6 @@
 .main-nav {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  height: 66px;
+  min-height: 66px;
   background-color: rgba($base-black, 0.3);
 
   &--opened {
@@ -12,12 +10,10 @@
 
 .main-nav__top-container {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height: 66px;
 
-  padding: 0 20px;
+  padding: 21px 20px;
 
   &--opened {
     padding-right: 13px;
@@ -27,14 +23,18 @@
 }
 
 .main-nav__logo {
-  &:hover path,
-  &:focus path {
-    fill: $base-red;
+  &:hover,
+  &:focus {
+    path {
+      fill: $base-red;
+    }
   }
 
-  &:active path {
-    fill: $base-white;
-    opacity: 0.3;
+  &:active {
+    path {
+      fill: $base-white;
+      opacity: 0.3;
+    }
   }
 }
 
@@ -50,7 +50,7 @@
     opacity: 0.3;
   }
 
-  & .main-nav__close-icon {
+  .main-nav__close-icon {
     display: none;
   }
 
@@ -58,11 +58,11 @@
     width: 43px;
     height: 23px;
 
-    & .main-nav__open-icon {
+    .main-nav__open-icon {
       display: none;
     }
 
-    & .main-nav__close-icon {
+    .main-nav__close-icon {
       display: inline;
     }
   }
@@ -76,32 +76,25 @@
 }
 
 .main-nav__list {
+  @include clear-list;
   display: none;
-  flex-direction: column;
   position: absolute;
   left: 0;
   right: 0;
-  top: 66px;
   background-color: $base-background;
 
   &--opened {
-    display: flex;
+    display: block;
   }
 }
 
 .main-nav__list-item {
-  flex: 1;
   margin-top: 1px;
 
-  & a {
-    flex: 1;
-    justify-content: center;
-    align-items: center;
+  a {
     display: block;
     padding-top: 25px;
     padding-bottom: 25px;
-    font-family: "Open Sans", "Arial", sans-serif;
-    font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 1.78;

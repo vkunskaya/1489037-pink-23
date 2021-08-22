@@ -1,7 +1,4 @@
 .page-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding: 40px 0;
 }
 
@@ -23,16 +20,16 @@
   &:active {
     opacity: 0.3;
 
-    & path {
+    path {
       fill: $base-text;
     }
 
-    & path + path {
+    path:nth-child(2) {
       fill: $base-red;
     }
   }
 }
 
 .page-footer__socials {
-  margin-top: 41px;
+  margin: 41px auto 0;
 }
