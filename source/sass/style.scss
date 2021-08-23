@@ -1,1 +1,39 @@
-// Начните писать стили здесь
+// Global
+@import "global/fonts.scss";
+@import "global/variables.scss";
+@import "global/mixins.scss";
+@import "global/global.scss";
+
+// Common blocks
+@import "blocks/button.scss";
+@import "blocks/site-list.scss";
+@import "blocks/download-shop.scss";
+@import "blocks/modal.scss";
+@import "blocks/paragraph.scss";
+@import "blocks/round-button.scss";
+@import "blocks/slider-toggles.scss";
+@import "blocks/text-field.scss";
+@import "blocks/title.scss";
+@import "blocks/textarea.scss";
+@import "blocks/socials.scss";
+
+// Project blocks
+@import "blocks/page.scss";
+@import "blocks/page-header.scss";
+@import "blocks/page-main.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/advantages.scss";
+@import "blocks/contacts.scss";
+@import "blocks/contest-section.scss";
+@import "blocks/contest-form.scss";
+@import "blocks/control.scss";
+@import "blocks/intro-text.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/photo-list.scss";
+@import "blocks/photo-section.scss";
+@import "blocks/post-block.scss";
+@import "blocks/produced-by.scss";
+@import "blocks/promo.scss";
+@import "blocks/reviews-slider.scss";
+@import "blocks/reviews.scss";
+@import "blocks/tariffs.scss";

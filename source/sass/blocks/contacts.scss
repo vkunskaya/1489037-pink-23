@@ -1,0 +1,49 @@
+.contacts {
+  padding-top: 50px;
+}
+
+.contacts__intro-text {
+  text-align: center;
+}
+
+.contacts__list {
+  @include clear-list;
+  margin-top: 45px;
+  margin-bottom: 41px;
+}
+
+.contacts__item {
+  padding: 0 20px 31px;
+}
+
+.contacts__title {
+  text-align: center;
+}
+
+.contacts__contact-point {
+  display: block;
+  margin-top: 15px;
+  color: $base-red;
+  text-align: center;
+  text-decoration-line: none;
+
+  &--link:hover,
+  &--link:focus,
+  &--link:active {
+    text-decoration-line: underline;
+    color: $base-text;
+  }
+
+  &--link:active {
+    opacity: 0.3;
+  }
+}
+
+.contacts__map-wrapper {
+  clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0 100%, 0 0);
+
+  iframe {
+    width: 100%;
+    height: calc(100vw * 0.63);
+  }
+}

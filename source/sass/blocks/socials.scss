@@ -1,0 +1,21 @@
+.socials {
+  @include clear-list;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.socials__item {
+  display: inline-flex;
+
+  &:not(:last-child) {
+    margin-right: 14px;
+  }
+}
+
+.socials__link {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 3px solid rgba($base-background, 0.1);
+}

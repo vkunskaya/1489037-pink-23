@@ -1,0 +1,38 @@
+.text-field {
+  span {
+    display: block;
+  }
+
+  input {
+    width: 100%;
+    padding: 13px 20px;
+    font-size: 18px;
+    line-height: 1.67;
+    color: $base-text;
+    border: 2px solid $base-grey;
+    border-radius: 1px;
+
+    &::placeholder {
+      color: $base-text;
+    }
+
+    &:hover {
+      border-color: $base-background;
+    }
+
+    &:active,
+    &:focus-visible {
+      outline: none;
+      border-color: $base-red;
+    }
+  }
+}
+
+.text-field__title {
+  margin-left: 23px;
+  margin-bottom: 17px;
+  font-size: 14px;
+  line-height: 2.14;
+  color: $base-red;
+  text-transform: uppercase;
+}

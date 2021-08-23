@@ -1,0 +1,21 @@
+.textarea {
+  width: 100%;
+  font-size: 18px;
+  line-height: 1.67;
+  border: 2px solid $base-grey;
+  border-radius: 1px;
+
+  &::placeholder {
+    text-align: center;
+  }
+
+  &:hover {
+    border-color: $base-background;
+  }
+
+  &:active,
+  &:focus-visible {
+    outline: none;
+    border-color: $base-red;
+  }
+}

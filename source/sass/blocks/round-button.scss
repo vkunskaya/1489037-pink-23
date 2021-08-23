@@ -1,0 +1,36 @@
+.round-button {
+  padding: 18px 35px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  color: $base-white;
+  text-align: center;
+  border: 3px solid $base-white;
+  border-radius: 30px;
+  background-color: $base-transparent;
+
+  &:hover,
+  &:focus {
+    color: $base-red;
+    background-color: $base-white;
+  }
+
+  &:active {
+    color: rgba($base-red, 0.3);
+  }
+
+  &--invert {
+    border-color: $base-red;
+    color: $base-red;
+
+    &:hover,
+    &:focus {
+      color: $base-white;
+      background-color: $base-red;
+    }
+
+    &:active {
+      color: rgba($base-white, 0.3);
+    }
+  }
+}

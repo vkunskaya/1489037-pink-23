@@ -1,0 +1,23 @@
+.promo {
+  // add styles
+}
+
+.promo__content-wrapper {
+  min-height: 462px;
+  padding-top: 29px;
+  background: url("../img/phone.png") bottom no-repeat,
+    url("../img/back-tablet.jpg") top no-repeat;
+  background-size: auto, cover;
+  background-color: $base-background;
+}
+
+.promo__slogan {
+  margin: 0 auto;
+  max-width: 280px;
+  color: $base-white;
+  text-align: center;
+}
+
+.promo__download-shop {
+  width: 100%;
+}

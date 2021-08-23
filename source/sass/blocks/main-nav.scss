@@ -1,0 +1,117 @@
+.main-nav {
+  position: relative;
+  min-height: 66px;
+  background-color: rgba($base-black, 0.3);
+
+  &--opened {
+    background-color: $base-background;
+  }
+}
+
+.main-nav__top-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 21px 20px;
+
+  &--opened {
+    padding-right: 13px;
+    background-color: $base-background;
+    box-shadow: 0 1px 0 $base-black;
+  }
+}
+
+.main-nav__logo {
+  &:hover,
+  &:focus {
+    path {
+      fill: $base-red;
+    }
+  }
+
+  &:active {
+    path {
+      fill: $base-white;
+      opacity: 0.3;
+    }
+  }
+}
+
+.main-nav__toggle {
+  padding: 0;
+  width: 50px;
+  height: 24px;
+  border: none;
+  background-color: $base-transparent;
+  cursor: pointer;
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  .main-nav__close-icon {
+    display: none;
+  }
+
+  &--active {
+    width: 43px;
+    height: 23px;
+
+    .main-nav__open-icon {
+      display: none;
+    }
+
+    .main-nav__close-icon {
+      display: inline;
+    }
+  }
+}
+
+.main-nav__toggle-icon {
+  &:hover path,
+  &:focus path {
+    fill: $base-red;
+  }
+}
+
+.main-nav__list {
+  @include clear-list;
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-color: $base-background;
+
+  &--opened {
+    display: block;
+  }
+}
+
+.main-nav__list-item {
+  margin-top: 1px;
+
+  a {
+    display: block;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.78;
+    color: $base-white;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: $base-background;
+    box-shadow: 0 1px 0 $base-black, inset 0 1px 0 $base-shadow;
+
+    &:hover,
+    &:focus {
+      color: $base-red;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}

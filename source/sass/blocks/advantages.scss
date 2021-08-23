@@ -1,0 +1,40 @@
+.advantages {
+  background-color: $base-grey-background;
+}
+
+.advantages__intro-container {
+  width: 100%;
+  padding-top: 46px;
+  padding-bottom: 46px;
+  clip-path: polygon(0 0, 100% 0, 100% 83%, 0% 100%);
+  background-color: $base-white;
+}
+
+.advantages__intro-text {
+  margin: 0;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.advantages__list {
+  @include clear-list;
+  padding-top: 53px;
+}
+
+.advantages__item {
+  text-align: center;
+
+  &:not(:last-child) {
+    margin-bottom: 43px;
+  }
+}
+
+.advantages__title {
+  margin: 0;
+  margin-bottom: 24px;
+  color: $base-black;
+}
+
+.advantages__description {
+  margin: 0;
+}

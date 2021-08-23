@@ -1,163 +1,194 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="page">
 
 <head>
   <meta charset="utf-8">
-  <title>HTML Academy: Пинк</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>HTML Academy: Пинк Каталог</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body class="page-body">
+<body class="page__body">
   <header class="page-header">
-    <div class="content-wrapper">
-      <a href="index.html" class="page-header__logo">
-        <img src="img/pink.svg" width="74" height="24" alt="Логотип">
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item"><a href="index.html">Главная</a></li>
-          <li class="site-list__item site-list__item--current"><a>Фотографии</a></li>
-          <li class="site-list__item"><a href="form.html">Конкурс</a></li>
-          <li class="site-list__item"><a href="#">HTML Academy</a></li>
-        </ul>
-      </nav>
-    </div>
+    <nav class="main-nav">
+      <div class="main-nav__top-container">
+        <a class="main-nav__logo" href="index.html">
+          <svg width="74" height="23" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M0 1.55A1.29 1.29 0 011.26.26h7.13c5.06 0 8.39 2.7 8.39 7.13v.06c0 4.85-4.04 7.36-8.8 7.36H2.53v6.8A1.28 1.28 0 011.27 23 1.27 1.27 0 010 21.61V1.55zm8.07 10.97c3.7 0 6.14-2 6.14-4.99v-.06c0-3.2-2.4-4.87-5.96-4.87H2.6v9.88l5.48.04zM21.6 1.39A1.28 1.28 0 0122.85 0a1.27 1.27 0 011.27 1.39V21.6A1.28 1.28 0 0122.86 23a1.27 1.27 0 01-1.27-1.39V1.4zM30.67 1.42A1.28 1.28 0 0131.93.17h.34a1.54 1.54 0 011.29.74l13.6 17.4V1.36A1.24 1.24 0 0148.39.12a1.23 1.23 0 011.23 1.24v20.3a1.14 1.14 0 01-1.15 1.17h-.13a1.7 1.7 0 01-1.31-.78L33.12 4.25v17.4a1.26 1.26 0 01-1.2 1.25 1.23 1.23 0 01-1.2-1.25V1.42h-.05zM55.94 1.39A1.28 1.28 0 0157.2 0a1.27 1.27 0 011.26 1.39v12.3L71.23.54c.26-.27.62-.43 1-.45a1.27 1.27 0 011.21 1.26 1.29 1.29 0 01-.41.9l-7.95 7.9 8.57 10.52c.23.26.35.6.35.94a1.31 1.31 0 01-1.34 1.28 1.23 1.23 0 01-1-.58L63.3 11.86l-4.83 4.85v4.88a1.27 1.27 0 01-1.26 1.27 1.26 1.26 0 01-1.26-1.27V1.4h-.01z"
+              fill="#fff" />
+          </svg>
+        </a>
+        <button class="main-nav__toggle" type="button" aria-label="Открыть меню">
+          <svg class="main-nav__toggle-icon main-nav__open-icon" width="50" height="24" fill="none"
+            xmlns="http://www.w3.org/2000/svg" aria-hidden=true>
+            <path
+              d="M1.14 0C.99 0 .84.02.7.07S.43.2.33.3A.88.88 0 000 1v2c0 .27.12.52.33.7.22.2.5.3.8.3h47.73c.15 0 .3-.02.44-.07s.27-.12.37-.22A.88.88 0 0050 3V1a.94.94 0 00-.33-.7c-.22-.2-.5-.3-.8-.3H1.13zm0 10c-.15 0-.3.02-.44.07s-.27.12-.37.22A.88.88 0 000 11v2c0 .27.12.52.33.7.22.2.5.3.8.3h47.73c.15 0 .3-.02.44-.07s.27-.12.37-.22A.88.88 0 0050 13v-2a.94.94 0 00-.33-.7c-.22-.2-.5-.3-.8-.3H1.13zm0 10c-.15 0-.3.02-.44.07s-.27.12-.37.22A.88.88 0 000 21v2c0 .27.12.52.33.7.22.2.5.3.8.3h47.73c.15 0 .3-.02.44-.07s.27-.12.37-.22A.88.88 0 0050 23v-2a.94.94 0 00-.33-.7c-.22-.2-.5-.3-.8-.3H1.13z"
+              fill="#fff" />
+          </svg>
+          <svg class="main-nav__toggle-icon main-nav__close-icon" width="23" height="23" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.85 0L0 20.85 2.15 23 23 2.15 20.85 0z" fill="#fff" />
+            <path d="M2.15 0L0 2.15 20.85 23 23 20.85 2.15 0z" fill="#fff" />
+          </svg>
+        </button>
+      </div>
+      <ul class="main-nav__list">
+        <li class="main-nav__list-item"><a href="index.html">Главная</a></li>
+        <li class="main-nav__list-item main-nav__list-item--current"><a>Фотографии</a></li>
+        <li class="main-nav__list-item"><a href="form.html">Конкурс</a></li>
+        <li class="main-nav__list-item"><a href="#">HTML Academy</a></li>
+      </ul>
+    </nav>
   </header>
   <main class="page-main">
-    <div class="page-main__title-wrapper">
-      <div class="content-wrapper">
-        <h1 class="main-title">Фотографии пользователей</h1>
-      </div>
+    <div class="content-wrapper page-main__title-wrapper">
+      <h1 class="intro-text intro-text--high page-main__title">
+        Фотографии<br>
+        пользователей
+      </h1>
     </div>
     <section class="photo-section">
-      <h2 class="high-paragraph photo-section__title">
-        Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?
-      </h2>
-      <ul class="photo-list photo-section__list">
-        <li class="photo-list__item photo-list__item--top">
-          <figure class="photo-list__photo-block photo-list__photo-block--top">
-            <a href="#" class="photo-list__photo photo-list__photo--top">
-              <img src="img/panorama.jpg" alt="Фото троллея высоко в горах" width="320" height="137">
-            </a>
-            <figcaption class="photo-list__info photo-list__info--top">
-              <p class="photo-list__author"><b>Анна</b> (5 минут назад)</p>
-              <p class="paragraph photo-list__description">Прыгать или нет? Напишите в комментарии свой совет и смотрите
-                прямую трансляцию
-                в перископе, задавайте свои вопросы!</p>
-              <p class="photo-list__likes photo-list__likes--top">
-                <button class="photo-list__likes-button" type="button" aria-label="Нравится фото"></button>
-                <span>Нравится: 215</span>
-              </p>
-            </figcaption>
-          </figure>
-        </li>
+      <div class="content-wrapper">
+        <h2 class="paragraph paragraph--high paragraph--center photo-section__title">
+          Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?
+        </h2>
+        <ul class="photo-list photo-section__list">
+          <li class="photo-list__item photo-list__item--top">
+            <figure class="photo-list__photo-block photo-list__photo-block--top">
+              <a href="#" class="photo-list__photo photo-list__photo--top">
+                <img src="img/panorama.jpg" alt="Фото троллея высоко в горах" width="320" height="137">
+              </a>
+              <figcaption class="photo-list__info photo-list__info--top">
+                <p class="photo-list__post-title"><b>Анна</b> <span class="photo-list__post-time">(5 минут назад)</span>
+                </p>
+                <p class="paragraph photo-list__description">
+                  Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию
+                  в перископе, задавайте свои вопросы!
+                </p>
+                <p class="photo-list__likes photo-list__likes--top">
+                  <button class="photo-list__likes-button" type="button" aria-label="Нравится фото"></button>
+                  <span>Нравится: 215</span>
+                </p>
+              </figcaption>
+            </figure>
+          </li>
 
-        <li class="photo-list__item">
-          <figure class="photo-list__photo-block">
-            <a href="#" class="photo-list__photo">
-              <img src="img/photo-1.jpg" alt="Фотоcессия белого автомобиля" width="280" height="180">
-            </a>
-            <figcaption class="photo-list__info">
-              <p class="photo-list__author"><b>Левон</b> (5 часов назад)</p>
-              <p class="paragraph photo-list__description">Вчера он на луну летал, сегодня в руки к нам попал.</p>
-              <p class="photo-list__likes">
-                <button class="photo-list__likes-button" type="button" aria-label="Нравится фото"></button>
-                <span>Нравится: 356</span>
-              </p>
-            </figcaption>
-          </figure>
-        </li>
+          <li class="photo-list__item">
+            <figure class="photo-list__photo-block">
+              <a href="#" class="photo-list__photo">
+                <img src="img/photo-1.jpg" alt="Фотоcессия белого автомобиля" width="280" height="180">
+              </a>
+              <figcaption class="photo-list__info">
+                <p class="photo-list__post-title"><b>Левон</b> <span class="photo-list__post-time">(5 часов
+                    назад)</span></p>
+                <p class="paragraph photo-list__description">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+                <p class="photo-list__likes">
+                  <button class="photo-list__likes-button" type="button" aria-label="Нравится фото"></button>
+                  <span>Нравится: 356</span>
+                </p>
+              </figcaption>
+            </figure>
+          </li>
 
-        <li class="photo-list__item">
-          <figure class="photo-list__photo-block">
-            <a href="#" class="photo-list__photo">
-              <img src="img/photo-2.jpg" alt="Фото акустической баранной установки" width="280" height="180">
-            </a>
-            <figcaption class="photo-list__info">
-              <p class="photo-list__author"><b>Антон</b> (12 часов назад)</p>
-              <p class="paragraph photo-list__description">Соседи будут рады!</p>
-              <p class="photo-list__likes">
-                <button class="photo-list__likes-button" type="button" aria-label="Нравится фото"></button>
-                <span>Нравится: 666</span>
-              </p>
-            </figcaption>
-          </figure>
-        </li>
+          <li class="photo-list__item">
+            <figure class="photo-list__photo-block">
+              <a href="#" class="photo-list__photo">
+                <img src="img/photo-2.jpg" alt="Фото акустической баранной установки" width="280" height="180">
+              </a>
+              <figcaption class="photo-list__info">
+                <p class="photo-list__post-title"><b>Антон</b> <span class="photo-list__post-time">(12 часов
+                    назад)</span></p>
+                <p class="paragraph photo-list__description">Соседи будут рады!</p>
+                <p class="photo-list__likes">
+                  <button class="photo-list__likes-button" type="button" aria-label="Нравится фото"></button>
+                  <span>Нравится: 666</span>
+                </p>
+              </figcaption>
+            </figure>
+          </li>
 
-        <li class="photo-list__item">
-          <figure class="photo-list__photo-block">
-            <a href="#" class="photo-list__photo">
-              <img src="img/photo-3.jpg" alt="Фото фасада стеклянного здания" width="280" height="180">
-            </a>
-            <figcaption class="photo-list__info">
-              <p class="photo-list__author"><b>Борис</b> (20 часов назад)</p>
-              <p class="paragraph photo-list__description">Здесь могла быть ваша цитата о высоком и вечном.</p>
-              <p class="photo-list__likes">
-                <button class="photo-list__likes-button" type="button" aria-label="Нравится фото"></button>
-                <span>Нравится: 215</span>
-              </p>
-            </figcaption>
-          </figure>
-        </li>
+          <li class="photo-list__item">
+            <figure class="photo-list__photo-block">
+              <a href="#" class="photo-list__photo">
+                <img src="img/photo-3.jpg" alt="Фото фасада стеклянного здания" width="280" height="180">
+              </a>
+              <figcaption class="photo-list__info">
+                <p class="photo-list__post-title"><b>Борис</b> <span class="photo-list__post-time">(20 часов
+                    назад)</span></p>
+                <p class="paragraph photo-list__description">Здесь могла быть ваша цитата о высоком и вечном.</p>
+                <p class="photo-list__likes">
+                  <button class="photo-list__likes-button" type="button" aria-label="Нравится фото"></button>
+                  <span>Нравится: 215</span>
+                </p>
+              </figcaption>
+            </figure>
+          </li>
 
-        <li class="photo-list__item">
-          <figure class="photo-list__photo-block">
-            <a href="#" class="photo-list__photo">
-              <img src="img/photo-4.jpg" alt="Фото мини-рынка арбузов и дынь под большим оранженым тентом" width="280"
-                height="180">
-            </a>
-            <figcaption class="photo-list__info">
-              <p class="photo-list__author"><b>Сергей</b> (25 часов назад)</p>
-              <p class="paragraph photo-list__description">Самая кубанская в мире!</p>
-              <p class="photo-list__likes">
-                <button class="photo-list__likes-button" type="button" aria-label="Нравится фото"></button>
-                <span>Нравится: 4</span>
-              </p>
-            </figcaption>
-          </figure>
-        </li>
+          <li class="photo-list__item">
+            <figure class="photo-list__photo-block">
+              <a href="#" class="photo-list__photo">
+                <img src="img/photo-4.jpg" alt="Фото мини-рынка арбузов и дынь под большим оранженым тентом" width="280"
+                  height="180">
+              </a>
+              <figcaption class="photo-list__info">
+                <p class="photo-list__post-title"><b>Сергей</b> <span class="photo-list__post-time">(25 часов
+                    назад)</span></p>
+                <p class="paragraph photo-list__description">Самая кубанская в мире!</p>
+                <p class="photo-list__likes">
+                  <button class="photo-list__likes-button" type="button" aria-label="Нравится фото"></button>
+                  <span>Нравится: 4</span>
+                </p>
+              </figcaption>
+            </figure>
+          </li>
 
-        <li class="photo-list__item">
-          <figure class="photo-list__photo-block">
-            <a href="#" class="photo-list__photo">
-              <img src="img/photo-5.jpg" alt="Селфи ног человека, сидяшего на камне в горах." width="280" height="180">
-            </a>
-            <figcaption class="photo-list__info">
-              <p class="photo-list__author"><b>Максим</b> (40 часов назад)</p>
-              <p class="paragraph photo-list__description">Где снег-то?</p>
-              <p class="photo-list__likes">
-                <button class="photo-list__likes-button" type="button" aria-label="Нравится фото"></button>
-                <span>Нравится: 150</span>
-              </p>
-            </figcaption>
-          </figure>
-        </li>
+          <li class="photo-list__item">
+            <figure class="photo-list__photo-block">
+              <a href="#" class="photo-list__photo">
+                <img src="img/photo-5.jpg" alt="Селфи ног человека, сидяшего на камне в горах." width="280"
+                  height="180">
+              </a>
+              <figcaption class="photo-list__info">
+                <p class="photo-list__post-title"><b>Максим</b> <span class="photo-list__post-time">(40 часов
+                    назад)</span></p>
+                <p class="paragraph photo-list__description">Где снег-то?</p>
+                <p class="photo-list__likes">
+                  <button class="photo-list__likes-button" type="button" aria-label="Нравится фото"></button>
+                  <span>Нравится: 150</span>
+                </p>
+              </figcaption>
+            </figure>
+          </li>
 
-        <li class="photo-list__item">
-          <figure class="photo-list__photo-block">
-            <a href="#" class="photo-list__photo">
-              <img src="img/photo-6.jpg" alt="Фото крыла самолета на фоне заходящего солнца" width="280" height="180">
-            </a>
-            <figcaption class="photo-list__info">
-              <p class="photo-list__author"><b>Надежда</b> (45 часов назад)</p>
-              <p class="paragraph photo-list__description">Всем GM и взаимные лайки!</p>
-              <p class="photo-list__likes">
-                <button class="photo-list__likes-button" type="button" aria-label="Нравится фото"></button>
-                <span>Нравится: 2560</span>
-              </p>
-            </figcaption>
-          </figure>
-        </li>
-      </ul>
-      <p class="high-paragraph">Затмите их всех!</p>
-      <p class="high-paragraph">Выкладывайте все, что накопилось в телефоне!</p>
+          <li class="photo-list__item">
+            <figure class="photo-list__photo-block">
+              <a href="#" class="photo-list__photo">
+                <img src="img/photo-6.jpg" alt="Фото крыла самолета на фоне заходящего солнца" width="280" height="180">
+              </a>
+              <figcaption class="photo-list__info">
+                <p class="photo-list__post-title"><b>Надежда</b> <span class="photo-list__post-time">(45 часов
+                    назад)</span></p>
+                <p class="paragraph photo-list__description">Всем GM и взаимные лайки!</p>
+                <p class="photo-list__likes">
+                  <button class="photo-list__likes-button" type="button" aria-label="Нравится фото"></button>
+                  <span>Нравится: 2560</span>
+                </p>
+              </figcaption>
+            </figure>
+          </li>
+        </ul>
+        <p class="paragraph paragraph--high paragraph--center photo-section__title">Затмите их всех!</p>
+        <p class="paragraph paragraph--high paragraph--center photo-section__title">Выкладывайте все, что накопилось в
+          телефоне!</p>
+      </div>
     </section>
     <section class="post-block">
       <h2 class="visually-hidden">Сделайте свой собственный пост</h2>
       <div class="content-wrapper">
         <a href="#" class="post-block__photo">
-        <img class="post-block__image" src="img/post-photo.jpg" alt="Зимняя дорога, укрытая снегом и ведущая в закат"
-          width="280" height="374">
+          <img class="post-block__image" src="img/post-photo.jpg" alt="Зимняя дорога, укрытая снегом и ведущая в закат"
+            width="280" height="374">
         </a>
         <form method="POST" action="https://echo.htmlacademy.ru" class="post-block__form">
           <fieldset class="post-block__control post-block__control--current">
@@ -175,9 +206,9 @@
             <button type="button" aria-label="Изменить контраст"></button>
             <input type="range" class="range post-block__range" name="contrast" value="49">
           </fieldset>
-          <div class="post-block__butons-container">
-            <button class="round-button post-block__submit-button" type="submit">Запостить</button>
-            <button class="round-button post-block__cancel-button" type="button">Отмена</button>
+          <div class="post-block__buttons-container">
+            <button class="round-button round-button--invert post-block__submit-button" type="submit">Запостить</button>
+            <button class="round-button round-button--invert post-block__cancel-button" type="button">Отмена</button>
           </div>
         </form>
       </div>
@@ -186,16 +217,24 @@
   <footer class="page-footer">
     <div class="content-wrapper">
       <a class="page-footer__logo">
-        <img src="img/logotype-blue-tablet.svg" width="74" height="24" alt="Логотип">
+        <svg width="145" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M71 18.55a1.29 1.29 0 011.26-1.29h7.13c5.06 0 8.39 2.7 8.39 7.13v.06c0 4.85-4.04 7.36-8.8 7.36h-5.44v6.8A1.28 1.28 0 0172.27 40 1.27 1.27 0 0171 38.61V18.55zm8.07 10.97c3.7 0 6.14-2 6.14-4.99v-.06c0-3.2-2.4-4.87-5.96-4.87H73.6v9.88l5.48.04zM92.6 18.39A1.28 1.28 0 0193.85 17a1.27 1.27 0 011.27 1.39V38.6A1.28 1.28 0 0193.86 40a1.27 1.27 0 01-1.27-1.39V18.4zM101.67 18.42a1.28 1.28 0 011.26-1.25h.34a1.53 1.53 0 011.29.74l13.6 17.4V18.36a1.24 1.24 0 011.23-1.24 1.23 1.23 0 011.23 1.24v20.3a1.16 1.16 0 01-.32.83 1.13 1.13 0 01-.83.34h-.13a1.69 1.69 0 01-1.31-.78l-13.91-17.8v17.4a1.26 1.26 0 01-1.2 1.25 1.23 1.23 0 01-1.2-1.25V18.42h-.05zM126.94 18.39A1.28 1.28 0 01128.2 17a1.27 1.27 0 011.26 1.39v12.3l12.76-13.14c.26-.27.62-.43 1-.45a1.27 1.27 0 011.21 1.26 1.3 1.3 0 01-.41.9l-7.95 7.9 8.57 10.52c.23.26.35.6.35.94a1.33 1.33 0 01-.4.92 1.29 1.29 0 01-.94.36 1.23 1.23 0 01-1-.58l-8.36-10.46-4.83 4.85v4.88a1.28 1.28 0 01-.78 1.17 1.26 1.26 0 01-1.74-1.17V18.4h-.01z"
+            fill="#283645" />
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M53.9 6.59l5.03 21.14a1.42 1.42 0 01-.75 1.72c-.2.09-.43.13-.65.11h-4.01a11.63 11.63 0 01-11.49 10.32c-5.92 0-10.8-4.5-11.49-10.32h-1.96A11.75 11.75 0 0116.97 40c-6 0-10.94-4.57-11.61-10.47H1.45A1.36 1.36 0 01.3 29a1.42 1.42 0 01-.24-1.27L5.1 6.6C5.46 4.26 7.64 0 13.5 0c.38 0 .76.16 1.03.44a1.5 1.5 0 010 2.1c-.27.27-.65.43-1.03.43-4.71 0-5.44 3.7-5.5 4.1L3.34 26.6h2.03a11.75 11.75 0 0111.6-10.3c5.94 0 10.84 4.48 11.6 10.3h1.99a11.63 11.63 0 0111.47-10.19c5.89 0 10.75 4.46 11.48 10.23v-.06h2.14L51 7.08c-.07-.41-.77-4.1-5.5-4.1-.39 0-.76-.17-1.03-.44a1.5 1.5 0 010-2.1c.27-.28.64-.44 1.03-.44 5.85 0 8.03 4.26 8.38 6.59zM25.66 29.56a9.12 9.12 0 00-.02-2.97 8.85 8.85 0 00-8.68-7.38 8.85 8.85 0 00-8.82 8.94 8.85 8.85 0 008.81 8.94c4.4 0 8.04-3.26 8.71-7.53zm24.94 0a8.75 8.75 0 00-8.58-10.23 8.75 8.75 0 00-8.58 10.23 8.73 8.73 0 008.58 7.4c4.33 0 7.91-3.2 8.58-7.4z"
+            fill="#D22856" />
+        </svg>
       </a>
       <ul class="socials page-footer__socials">
         <li class="socials__item"><a href="#" class="socials__link" aria-label="Twitter"></a></li>
         <li class="socials__item"><a href="#" class="socials__link" aria-label="Facebook"></a></li>
         <li class="socials__item"><a href="#" class="socials__link" aria-label="Youtube"></a></li>
       </ul>
-      <p class="produced-by">
+      <p class="paragraph produced-by">
         Разработано
-        <a href="https://htmlacademy.ru/intensive/adaptive" aria-label="Html Academy Adaptive Курс">
+        <a class="produced-by__logo" href="https://htmlacademy.ru/intensive/adaptive"
+          aria-label="Html Academy Adaptive Курс">
           <svg width="27" height="34" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M13.64.02L13.5 0 0 1.4v24.61L13.5 34 27 26.01V1.41L13.64 0zm11.6 25L13.5 31.96 1.77 25.02v-10.1l11.68 6.93.02 1.25-8.02-4.75v1.23l8.04 4.8.02 1.3-8.05-4.76v1.22l8.04 4.81 8.12-4.83V16.9l3.62-2.15v10.26zm0-11.57L22 15.33l-1.48.88-7.06-4.19-.01 1.23 6.04 3.57-.06.03-.13.07-.86.5-4.98-2.95-.01 1.22 3.93 2.33-.93.61-.02.01-2.97-1.74-.01 1.23 1.94 1.13-1.98 1.19L1.8 13.58l11.63-6.96 11.8 6.83zm0-1.22L13.43 5.3 1.77 12.22V2.99L13.5 1.76 25.23 3v9.24z"
