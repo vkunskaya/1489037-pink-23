@@ -1,12 +1,27 @@
 .tariffs {
-  padding-top: 110px;
+  padding-top: 104px;
   padding-bottom: 49px;
   background-color: $base-grey-background;
+  clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
+
+  @media (min-width: $tablet-width) {
+    padding-top: 100px;
+    padding-bottom: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 159px;
+    padding-bottom: 98px;
+    clip-path: polygon(0 11%, 100% 0, 100% 100%, 0% 100%);
+  }
 }
 
 .tariffs__table {
   border-collapse: collapse;
   background-color: $base-white;
+  table-layout: fixed;
+  width: 100%;
+  margin-left: -100%;
 
   th {
     border: 2px solid $base-white;
@@ -20,6 +35,14 @@
     &:last-of-type {
       border-right: none;
     }
+
+    @media (min-width: $tablet-width) {
+      padding: 8px 22px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 17px 22px;
+    }
   }
 
   td {
@@ -30,6 +53,19 @@
     &:not(:first-child) {
       border-top: none;
     }
+
+    @media (min-width: $tablet-width) {
+      width: auto;
+      padding: 6px 15px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 14px 22px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-left: 0;
   }
 }
 
@@ -52,50 +88,93 @@
     &::before {
       content: attr(data-hit);
       position: absolute;
-      left: -25px;
-      top: 7px;
+      left: -14%;
+      top: 17%;
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 100%;
-      line-height: 2.14;
+      width: 60%;
+      height: 23px;
+      line-height: 30px;
       transform: rotate(-45deg);
       text-transform: uppercase;
       background-color: $base-red;
+
+      @media (min-width: $tablet-width) {
+        left: -18%;
+        top: 9%;
+      }
+
+      @media (min-width: $desktop-width) {
+        left: -19%;
+        top: 15%;
+      }
     }
+  }
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+    padding: 23px 15px;
   }
 }
 
 .tariffs__name {
+  display: block;
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.88;
+  line-height: 30px;
   text-transform: uppercase;
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+  }
 }
 
 .tariffs__price {
+  display: block;
   font-size: 18px;
   font-weight: 300;
-  line-height: 1.67;
+  line-height: 30px;
   text-transform: uppercase;
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+  }
 }
 
 .tariffs__functionality {
   text-transform: uppercase;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  @media (min-width: $tablet-width) {
+    text-transform: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+  }
 }
 
 .tariffs__availability {
-  &::before {
+  &::after {
     content: "";
     display: block;
-    width: 31px;
     height: 31px;
     background: url("../img/no.svg") no-repeat;
-    background-position: center;
+    background-position: right center;
+
+    @media (min-width: $desktop-width) {
+      height: 21px;
+    }
+
+    @media (min-width: $tablet-width) {
+      background-position-x: center;
+    }
   }
 
   &--included {
-    &::before {
+    &::after {
       background-image: url("../img/yes.svg");
     }
   }
@@ -108,4 +187,8 @@
 .tariffs__toggles {
   margin: 0;
   margin-top: 45px;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }

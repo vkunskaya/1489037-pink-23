@@ -2,20 +2,30 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 280px;
   padding-top: 28px;
   padding-bottom: 38px;
-  background-color: $base-dark-background;
+  background-color: $base-transparent;
+
+  @media (min-width: $tablet-width) {
+    width: 300px;
+  }
 }
 
 .download-shop__link {
+  width: 100%;
   text-decoration: none;
+
+  @media (min-width: $desktop-width) {
+    font-size: 21px;
+  }
 }
 
 .download-shop__list {
   @include clear-list;
   display: flex;
   align-items: center;
-  margin-top: 53px;
+  margin-top: 32px;
 }
 
 .download-shop__item {
@@ -29,12 +39,18 @@
 
   a {
     display: block;
+    line-height: 0;
   }
 }
 
 .download-shop__shop-hint {
   margin: 0;
-  margin-top: 31px;
+  margin-top: 14px;
   font-weight: 300;
   color: $base-white;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+  }
 }
