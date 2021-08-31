@@ -22,7 +22,7 @@
   padding-right: 20px;
   margin: 0 auto;
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     width: 980px;
   }
 }

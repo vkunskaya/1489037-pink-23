@@ -6,7 +6,7 @@
   padding-top: 43px;
   padding-bottom: 40px;
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     display: grid;
     grid-template-columns: 22px 1fr 22px;
   }
@@ -24,7 +24,7 @@
   line-height: 30px;
   text-align: center;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     order: 2;
     margin-top: 45px;
     font-size: 20px;
@@ -34,7 +34,7 @@
 .reviews__author-info {
   display: none;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     display: block;
     font-weight: 400;
   }
@@ -45,12 +45,12 @@
   margin-top: 23px;
   text-align: center;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     margin-top: 10px;
     font-size: 18px;
   }
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     width: 80%;
   }
 }
@@ -58,7 +58,7 @@
 .reviews__toggles {
   margin-top: 38px;
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     display: none;
   }
 }

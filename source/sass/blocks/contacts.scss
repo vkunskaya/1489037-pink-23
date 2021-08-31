@@ -1,7 +1,7 @@
 .contacts {
   padding-top: 40px;
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     padding-top: 60px;
   }
 }
@@ -16,13 +16,13 @@
   margin-top: 30px;
   margin-bottom: 4px;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     margin-top: 55px;
     margin-bottom: 20px;
   }
@@ -35,11 +35,11 @@
     margin-bottom: 20px;
   }
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     max-width: 270px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     &--phone {
       order: 1;
     }
@@ -77,7 +77,7 @@
     opacity: 0.3;
   }
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     font-size: 24px;
     line-height: 33px;
   }
@@ -90,16 +90,12 @@
   iframe {
     width: 100%;
     min-height: calc(100vw * 0.63);
-  }
 
-  @media (min-width: $tablet-width) {
-    iframe {
+    @include tablet {
       min-height: calc(100vw * 0.57);
     }
-  }
 
-  @media (min-width: $desktop-width) {
-    iframe {
+    @include desktop {
       min-height: calc(100vw * 0.42);
     }
   }

@@ -4,12 +4,12 @@
   background-color: $base-grey-background;
   clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     padding-top: 100px;
     padding-bottom: 70px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     padding-top: 159px;
     padding-bottom: 98px;
     clip-path: polygon(0 11%, 100% 0, 100% 100%, 0% 100%);
@@ -36,11 +36,11 @@
       border-right: none;
     }
 
-    @media (min-width: $tablet-width) {
+    @include tablet {
       padding: 8px 22px;
     }
 
-    @media (min-width: $desktop-width) {
+    @include desktop {
       padding: 17px 22px;
     }
   }
@@ -54,17 +54,17 @@
       border-top: none;
     }
 
-    @media (min-width: $tablet-width) {
+    @include tablet {
       width: auto;
       padding: 6px 15px;
     }
 
-    @media (min-width: $desktop-width) {
+    @include desktop {
       padding: 14px 22px;
     }
   }
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     margin-left: 0;
   }
 }
@@ -112,7 +112,7 @@
     }
   }
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     width: auto;
     padding: 23px 15px;
   }
@@ -125,7 +125,7 @@
   line-height: 30px;
   text-transform: uppercase;
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     font-size: 18px;
   }
 }
@@ -137,7 +137,7 @@
   line-height: 30px;
   text-transform: uppercase;
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     font-size: 20px;
   }
 }
@@ -147,11 +147,11 @@
   white-space: nowrap;
   text-overflow: ellipsis;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     text-transform: none;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     font-size: 18px;
   }
 }
@@ -164,11 +164,11 @@
     background: url("../img/no.svg") no-repeat;
     background-position: right center;
 
-    @media (min-width: $desktop-width) {
+    @include desktop {
       height: 21px;
     }
 
-    @media (min-width: $tablet-width) {
+    @include tablet {
       background-position-x: center;
     }
   }
@@ -188,7 +188,7 @@
   margin: 0;
   margin-top: 45px;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     display: none;
   }
 }

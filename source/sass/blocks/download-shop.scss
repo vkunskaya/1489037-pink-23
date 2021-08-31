@@ -7,7 +7,7 @@
   padding-bottom: 38px;
   background-color: $base-transparent;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     width: 300px;
   }
 }
@@ -16,7 +16,7 @@
   width: 100%;
   text-decoration: none;
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     font-size: 21px;
   }
 }
@@ -50,7 +50,7 @@
   color: $base-white;
   text-align: center;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     font-size: 18px;
   }
 }

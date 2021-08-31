@@ -9,7 +9,7 @@
   background-size: auto 286px, cover;
   background-color: $base-background;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     justify-content: flex-start;
     align-items: flex-start;
     min-width: 619px;
@@ -17,7 +17,7 @@
     background-size: auto 80%, cover;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     background-position: 70% bottom, top;
   }
 }
@@ -26,13 +26,13 @@
   flex: 1;
   margin-top: 25px;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     margin-top: 102px;
     flex-grow: 0;
     width: 100%;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     width: 980px;
   }
 }
@@ -42,13 +42,13 @@
   color: $base-white;
   text-align: center;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     padding-left: 20px;
     padding-right: 20px;
     line-height: 48px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     line-height: 68px;
   }
 }
@@ -59,13 +59,13 @@
   justify-content: center;
   background-color: $base-dark-background;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     width: 100%;
     justify-content: flex-start;
     background-color: $base-transparent;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     width: 980px;
   }
 }

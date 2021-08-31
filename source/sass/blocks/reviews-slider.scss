@@ -10,7 +10,7 @@
     flex-direction: column;
     align-items: center;
 
-    @media (min-width: $desktop-width) {
+    @include desktop {
       order: 2;
       padding-top: 110px;
     }
@@ -20,7 +20,7 @@
 .reviews-slider__button {
   display: none;
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     display: flex;
     align-items: center;
     padding: 0;
@@ -44,17 +44,13 @@
       opacity: 0.3;
     }
 
-    &:hover,
-    &:focus {
-      path {
-        opacity: 0.6;
-      }
+    &:hover path,
+    &:focus path {
+      opacity: 0.6;
     }
 
-    &:active {
-      path {
-        opacity: 0.1;
-      }
+    &:active path {
+      opacity: 0.1;
     }
   }
 }
