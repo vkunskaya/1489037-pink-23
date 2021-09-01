@@ -1,0 +1,100 @@
+.research {
+  display: none;
+
+  @include tablet {
+    display: block;
+    padding-top: 54px;
+    padding-bottom: 54px;
+    background-color: $base-white;
+  }
+
+  @include desktop {
+    padding-top: 17px;
+    padding-bottom: 67px;
+    background-color: $base-grey-background;
+  }
+}
+
+.research__container {
+  &::before {
+    @include tablet {
+      content: "";
+      display: block;
+      width: 238px;
+      height: 276px;
+      background: url("../img/timer.svg") no-repeat;
+      background-size: contain;
+    }
+
+    @include desktop {
+      width: 298px;
+      height: 345px;
+    }
+  }
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: 238px 1fr;
+    gap: 72px;
+    align-items: flex-end;
+  }
+
+  @include desktop {
+    grid-template-columns: 298px 1fr;
+    gap: 71px;
+  }
+}
+
+.research__text {
+  @include tablet {
+    padding-bottom: 29px;
+  }
+
+  @include desktop {
+    padding-bottom: 53px;
+    padding-right: 36px;
+  }
+}
+
+.research__title {
+  margin: 0;
+
+  @include tablet {
+    width: 168px;
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  @include desktop {
+    width: auto;
+    line-height: 30px;
+  }
+}
+
+.research__description {
+  margin: 0;
+
+  @include tablet {
+    margin-top: 20px;
+  }
+
+  @include desktop {
+    margin-top: 30px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+.research__link {
+  @include tablet {
+    margin-top: 20px;
+    display: block;
+    color: $base-red;
+  }
+
+  @include desktop {
+    margin-top: 40px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+}

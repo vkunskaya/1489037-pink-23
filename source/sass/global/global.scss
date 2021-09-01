@@ -20,4 +20,9 @@
 .content-wrapper {
   padding-left: 20px;
   padding-right: 20px;
+  margin: 0 auto;
+
+  @include desktop {
+    width: 980px;
+  }
 }

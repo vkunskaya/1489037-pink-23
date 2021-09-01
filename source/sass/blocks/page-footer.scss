@@ -1,6 +1,21 @@
 .page-footer {
-  padding: 40px 0;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+
+  @include desktop {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
 }
+
 
 .page-footer__logo {
   display: block;
@@ -28,8 +43,24 @@
       fill: $base-red;
     }
   }
+
+  @include tablet {
+    margin-bottom: 18px;
+  }
 }
 
 .page-footer__socials {
   margin: 41px auto 0;
+
+  @include tablet {
+    margin: 0;
+  }
+}
+
+.page-footer__produced-by {
+  margin-top: 41px;
+
+  @include tablet {
+    margin: 0;
+  }
 }

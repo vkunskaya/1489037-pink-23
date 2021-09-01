@@ -1,23 +1,71 @@
 .promo {
-  // add styles
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 667px;
+  background: url("../img/phone.png") no-repeat,
+    url("../img/back-tablet.jpg") no-repeat;
+  background-position: bottom 272px center, top left;
+  background-size: auto 286px, cover;
+  background-color: $base-background;
+
+  @include tablet {
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-width: 619px;
+    background-position: right bottom, top;
+    background-size: auto 80%, cover;
+  }
+
+  @include desktop {
+    background-position: 70% bottom, top;
+  }
 }
 
 .promo__content-wrapper {
-  min-height: 462px;
-  padding-top: 29px;
-  background: url("../img/phone.png") bottom no-repeat,
-    url("../img/back-tablet.jpg") top no-repeat;
-  background-size: auto, cover;
-  background-color: $base-background;
+  flex: 1;
+  margin-top: 25px;
+
+  @include tablet {
+    margin-top: 102px;
+    flex-grow: 0;
+    width: 100%;
+  }
+
+  @include desktop {
+    width: 980px;
+  }
 }
 
 .promo__slogan {
-  margin: 0 auto;
   max-width: 280px;
   color: $base-white;
   text-align: center;
+
+  @include tablet {
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 48px;
+  }
+
+  @include desktop {
+    line-height: 68px;
+  }
 }
 
 .promo__download-shop {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: $base-dark-background;
+
+  @include tablet {
+    width: 100%;
+    justify-content: flex-start;
+    background-color: $base-transparent;
+  }
+
+  @include desktop {
+    width: 980px;
+  }
 }

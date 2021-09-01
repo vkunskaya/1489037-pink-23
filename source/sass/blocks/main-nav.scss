@@ -1,6 +1,4 @@
 .main-nav {
-  position: relative;
-  min-height: 66px;
   background-color: rgba($base-black, 0.3);
 
   &--opened {
@@ -9,6 +7,7 @@
 }
 
 .main-nav__top-container {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -20,9 +19,21 @@
     background-color: $base-background;
     box-shadow: 0 1px 0 $base-black;
   }
+
+  @include tablet {
+    padding-top: 27px;
+    padding-bottom: 43px;
+  }
 }
 
 .main-nav__logo {
+  font-size: 0;
+}
+
+.main-nav__logo-icon {
+  display: none;
+  cursor: pointer;
+
   &:hover,
   &:focus {
     path {
@@ -34,6 +45,18 @@
     path {
       fill: $base-white;
       opacity: 0.3;
+    }
+  }
+
+  @include tablet {
+    display: inline;
+  }
+
+  &--mobile {
+    display: inline;
+
+    @include tablet {
+      display: none;
     }
   }
 }
@@ -66,6 +89,10 @@
       display: inline;
     }
   }
+
+  @include desktop {
+    display: none;
+  }
 }
 
 .main-nav__toggle-icon {
@@ -81,10 +108,19 @@
   position: absolute;
   left: 0;
   right: 0;
+  top: 100%;
   background-color: $base-background;
 
   &--opened {
     display: block;
+  }
+
+  @include desktop {
+    position: static;
+    display: flex;
+    justify-content: flex-end;
+    width: 770px;
+    background-color: $base-transparent;
   }
 }
 
@@ -97,13 +133,14 @@
     padding-bottom: 25px;
     font-weight: 700;
     font-size: 18px;
-    line-height: 1.78;
+    line-height: 32px;
     color: $base-white;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
     background-color: $base-background;
     box-shadow: 0 1px 0 $base-black, inset 0 1px 0 $base-shadow;
+    cursor: pointer;
 
     &:hover,
     &:focus {
@@ -112,6 +149,22 @@
 
     &:active {
       opacity: 0.3;
+    }
+
+    @include desktop {
+      font-weight: 400;
+      line-height: 18px;
+      padding: 0;
+      box-shadow: none;
+      background-color: $base-transparent;
+      text-transform: initial;
+    }
+  }
+
+
+  @include desktop {
+    &:not(:first-child) {
+      margin-left: 79px;
     }
   }
 }
