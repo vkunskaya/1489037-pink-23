@@ -1,12 +1,31 @@
 .photo-section {
-  padding: 54px 0 52px;
+  padding: 48px 0 52px;
+
+  @include tablet {
+    padding: 90px 0 70px;
+  }
 }
 
 .photo-section__title {
   margin: 0;
+  padding-inline: 15px;
+
+  @include tablet {
+    font-size: 18px;
+  }
 }
 
 .photo-section__list {
-  margin-top: 60px;
+  margin-top: 54px;
   margin-bottom: 49px;
+
+  @include tablet {
+    margin-top: 80px;
+    margin-bottom: 70px;
+  }
+
+  @include desktop {
+    margin-top: 90px;
+    margin-bottom: 60px;
+  }
 }

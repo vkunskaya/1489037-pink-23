@@ -1,35 +1,104 @@
 .modal {
+  position: fixed;
+  bottom: 10%;
+  right: 0;
+  left: 0;
+  margin: auto;
+  display: none;
   padding-top: 44px;
   padding-bottom: 52px;
   background-color: $base-white;
   box-shadow: 0 7px 15px $drop-shadow;
   border-radius: 1px;
 
+  @include tablet {
+    max-width: 460px;
+  }
+
+  @include desktop {
+    max-width: 780px;
+    padding-bottom: 0;
+  }
+
   &--big {
     padding-bottom: 0;
+  }
+
+  &--opened {
+    display: block;
   }
 }
 
 .modal__content {
   padding: 0 20px;
+  margin: 0 auto;
+
+  @include tablet {
+    max-width: 320px;
+    padding: 0;
+  }
+
+  @include desktop {
+    max-width: 351px;
+  }
+
+  &--big {
+    @include desktop {
+      max-width: 396px;
+    }
+  }
 }
 
 .modal__title {
-  margin: 0;
-  margin-bottom: 37px;
+  margin: 0 auto;
+  margin-bottom: 30px;
   text-align: center;
+
+  @include tablet {
+    max-width: 250px;
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  @include desktop {
+    max-width: 330px;
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  &--big {
+    @include desktop {
+      max-width: 396px;
+    }
+  }
 }
 
 .modal__description {
-  margin: 0;
+  margin: 0 auto;
   color: $base-text;
   text-align: center;
+
+  @include tablet {
+    font-size: 18px;
+  }
+
+  &--big {
+    max-width: 264px;
+
+    @include tablet {
+      max-width: 378px;
+    }
+  }
 }
 
 .modal__button {
   display: block;
   margin: 50px auto 0;
   width: 100%;
+
+  @include tablet {
+    width: auto;
+  }
 }
 
 .modal__button-wrapper {
@@ -40,10 +109,21 @@
   padding-left: 22px;
   padding-right: 22px;
 
-  &--big {
+  @include desktop {
     padding-top: 52px;
     padding-bottom: 52px;
     margin-top: 41px;
+    background: $base-grey-background;
+
+    .modal__button {
+      margin: 0 auto;
+    }
+  }
+
+  &--big {
+    padding-top: 52px;
+    padding-bottom: 52px;
+    margin-top: 35px;
     background: $base-grey-background;
 
     .modal__button {

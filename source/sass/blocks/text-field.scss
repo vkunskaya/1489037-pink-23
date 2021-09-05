@@ -1,6 +1,10 @@
 .text-field {
-  span {
-    display: block;
+  display: block;
+
+
+  @include tablet {
+    display: flex;
+    align-items: center;
   }
 
   input {
@@ -29,10 +33,15 @@
 }
 
 .text-field__title {
+  display: block;
   margin-left: 23px;
   margin-bottom: 17px;
   font-size: 14px;
   line-height: 30px;
   color: $base-red;
   text-transform: uppercase;
+
+  @include tablet {
+    margin: 0 20px 0 0;
+  }
 }

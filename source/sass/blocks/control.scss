@@ -6,9 +6,14 @@
   input:active ~ &__label::before {
     border-color: $base-red;
   }
+
+  input:checked ~ &__label::after {
+    display: block;
+  }
 }
 
 .control__label {
+  position: relative;
   display: flex;
   align-items: center;
   font-size: 18px;
@@ -20,10 +25,20 @@
     content: "";
     display: block;
     margin-right: 22px;
-    width: 35px;
-    height: 35px;
     border: 2px solid $base-grey;
     background-color: $base-white;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: none;
+    top: 50%;
+    left: 8px;
+    width: 22px;
+    height: 16px;
+    background-size: contain;
+    transform: translate(0, -50%);
   }
 
   &:hover {
@@ -40,12 +55,32 @@
 
   &--check {
     &::before {
+      width: 31px;
+      height: 31px;
       border-radius: 1px;
+    }
+
+    &::after {
+      left: 8px;
+      width: 22px;
+      height: 16px;
+      background: url("../../img/tick.svg") no-repeat;
+      background-size: contain;
     }
   }
 
   &--radio {
     &::before {
+      width: 33px;
+      height: 33px;
+      border-radius: 50%;
+    }
+
+    &::after {
+      left: 11px;
+      width: 15px;
+      height: 15px;
+      background-color: $base-red;
       border-radius: 50%;
     }
   }

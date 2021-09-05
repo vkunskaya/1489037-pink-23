@@ -127,6 +127,19 @@
 .main-nav__list-item {
   margin-top: 1px;
 
+  @include desktop {
+    &:not(:first-child) {
+      margin-left: 79px;
+    }
+  }
+
+  &--current {
+    text-decoration-line: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: $base-white;
+    text-underline-offset: 15px;
+  }
+
   a {
     display: block;
     padding-top: 25px;
@@ -158,13 +171,6 @@
       box-shadow: none;
       background-color: $base-transparent;
       text-transform: initial;
-    }
-  }
-
-
-  @include desktop {
-    &:not(:first-child) {
-      margin-left: 79px;
     }
   }
 }
