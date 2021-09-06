@@ -10,6 +10,10 @@
   border-radius: 1px;
   background-color: $base-green;
 
+  @include tablet {
+    min-width: 296px;
+  }
+
   &:hover,
   &:focus,
   &:active {

@@ -1,35 +1,206 @@
 .post-block {
+  background-color: $base-grey-background;
+
+  @include desktop {
+    background-color: $base-white;
+  }
+}
+
+.post-block__container {
   padding-top: 20px;
   padding-bottom: 41px;
-  background-color: $base-grey-background;
+
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 57px;
+    padding-bottom: 54px;
+  }
+
+  @include desktop {
+    width: 940px;
+    background-color: $base-grey-background;
+    padding: 57px 60px 57px 80px;
+  }
 }
 
 .post-block__photo {
-  // add styles
+  display: block;
+  line-height: 0;
+
+  @include tablet {
+    margin-right: 49px;
+  }
+
+  @include desktop {
+    margin-right: 90px;
+  }
 }
 
 .post-block__image {
-  // add styles
+  width: 280px;
+  height: 374px;
+
+  @include tablet {
+    width: 300px;
+    height: 400px;
+  }
+}
+
+.post-block__form {
+  @include tablet {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.post-block__range-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 125px;
+  padding-top: 42px;
+
+  @include tablet {
+    flex-direction: column;
+    padding-top: 0;
+    justify-content: space-between;
+  }
 }
 
 .post-block__control {
-  // add styles
+  margin: 0;
+  padding: 0;
+  border: none;
+
+  display: flex;
+  flex-direction: column;
+
+  @include tablet {
+    flex-direction: row;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba($base-background, 0.1);
+  }
+
+  &:not(:first-of-type) {
+    margin-left: 35px;
+
+    @include tablet {
+      margin-left: 0;
+      padding-top: 27px;
+    }
+  }
+
+  &:last-of-type {
+    @include desktop {
+      border-bottom: none;
+    }
+  }
+
+  input {
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    @include tablet {
+      display: inline-block;
+      position: static;
+    }
+  }
 
   &--current {
-    // add styles
+    input {
+      display: inline-block;
+    }
+  }
+}
+
+.post-block__icon-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0;
+  background-color: $base-transparent;
+  border: none;
+  cursor: pointer;
+  width: 48px;
+  height: 44px;
+
+  @include tablet {
+    width: 24px;
+    height: 22px;
+    margin-right: 29px;
+  }
+
+  @include desktop {
+    width: 48px;
+    height: 44px;
+    margin-right: 48px;
+  }
+
+  path {
+    fill: $base-background;
+    opacity: 0.3;
+
+    @include tablet {
+      fill: $base-red;
+      opacity: 1;
+    }
+  }
+
+  &--current {
+    path {
+      fill: $base-red;
+      opacity: 1;
+    }
   }
 }
 
 .post-block__range {
-  // add styles
+  @include tablet {
+    margin-right: 18px;
+  }
 }
 
 .post-block__buttons-container {
-  margin-top: 38px;
+  margin-top: 34px;
+  position: relative;
+  left: -20px;
+  width: 100vw;
+  padding-inline: 20px;
+  padding-top: 38px;
+  border-top: 1px solid rgba($base-background, 0.1);
+
+  @include tablet {
+    left: 0;
+    width: 100%;
+    border-top: none;
+    margin-top: 0;
+    padding-inline: 0;
+  }
+
+  @include desktop {
+    display: flex;
+  }
 }
 
 .post-block__submit-button {
   width: 100%;
+
+  @include tablet {
+    margin-top: auto;
+  }
+
+  @include desktop {
+    flex: 1;
+    margin-right: 44px;
+  }
 }
 
 .post-block__cancel-button {
@@ -50,5 +221,9 @@
     color: $base-white;
     background-color: $base-background;
     opacity: 0.3;
+  }
+
+  @include desktop {
+    flex: 1;
   }
 }

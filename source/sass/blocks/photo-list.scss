@@ -1,50 +1,148 @@
 .photo-list {
   @include clear-list;
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  @include desktop {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 .photo-list__item {
-  // add styles
+  &:not(:last-child) {
+    margin-bottom: 20px;
+
+    @include tablet {
+      margin-bottom: 0;
+    }
+  }
+
+  &--top {
+    @include tablet {
+      grid-column: 1 / -1;
+    }
+  }
 }
 
 .photo-list__photo-block {
   margin: 0;
 
-  &--top {
-    // add styles
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
   }
 }
 
 .photo-list__photo {
   display: block;
   line-height: 0;
+  background-color: $base-grey;
 
   img {
     width: 100%;
-    height: auto;
+    min-height: 180px;
+
+    @include tablet {
+      min-height: 300px;
+    }
+
+    @include desktop {
+      min-height: 400px;
+    }
   }
 
   &--top {
     position: relative;
     left: -20px;
+    width: 100vw;
+
+    @include desktop {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1200px;
+    }
 
     img {
-      width: 100vw;
-      height: auto;
+      min-height: 137px;
+      object-fit: cover;
+
+      @media (min-width: $tablet-width) {
+        min-height: 509px;
+      }
+
+      @media (min-width: $tablet-width) {
+        height: 506px;
+      }
+    }
+
+    &::before {
+      content: attr(data-top);
+      position: absolute;
+      top: 0;
+      right: 20px;
+      display: inline-block;
+      justify-content: center;
+      align-items: center;
+      padding: 6px 19px;
+      font-size: 12px;
+      line-height: 24px;
+      font-weight: 700;
+      color: $base-white;
+      background-color: $base-red;
+      text-align: center;
+      text-transform: uppercase;
+
+      @media (min-width: $tablet-width) {
+        top: 57px;
+      }
+
+      @media (min-width: $desktop-width) {
+        top: 54px;
+        right: 130px;
+      }
     }
   }
 }
 
 .photo-list__info {
-  padding: 26px 12px 26px 17px;
+  padding: 18px 12px 18px 17px;
   background-color: $base-grey-background;
 
+  @include tablet {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 24px 30px 26px 30px;
+  }
+
   &--top {
-    // add styles
+    @include tablet {
+      display: grid;
+      grid-template-columns: 1fr 150px;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    @include desktop {
+      padding-top: 530px;
+    }
   }
 }
 
 .photo-list__post-title {
   margin: 0;
+
+  &--top {
+    @include tablet {
+      order: 1;
+    }
+  }
 }
 
 .photo-list__post-time {
@@ -56,17 +154,32 @@
 
 .photo-list__description {
   margin: 0;
-  margin-top: 4px;
+  margin-bottom: 10px;
+
+  &--top {
+    @include tablet {
+      order: 3;
+      grid-column: 1 / -1;
+    }
+  }
 }
 
 .photo-list__likes {
   margin: 0;
-  margin-top: 20px;
+  margin-top: auto;
   display: flex;
   align-items: center;
 
+  @include tablet {
+    justify-content: space-between;
+  }
+
   &--top {
-    // add styles
+    @include tablet {
+      order: 2;
+      margin-top: 0;
+      justify-content: flex-end;
+    }
   }
 
   span {
@@ -91,5 +204,11 @@
 
   &:hover {
     cursor: pointer;
+  }
+
+  @include tablet {
+    order: 2;
+    margin-right: 0;
+    margin-left: 16px;
   }
 }

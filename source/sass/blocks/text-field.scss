@@ -1,9 +1,13 @@
 .text-field {
-  span {
-    display: block;
+  display: block;
+
+  @include tablet {
+    display: flex;
+    align-items: center;
   }
 
-  input {
+  input,
+  textarea {
     width: 100%;
     padding: 13px 20px;
     font-size: 18px;
@@ -26,13 +30,29 @@
       border-color: $base-red;
     }
   }
+
+  textarea {
+    padding: 23px 20px;
+    resize: none;
+
+    &::placeholder {
+      @media (min-width: $desktop-width) {
+        text-align: start;
+      }
+    }
+  }
 }
 
 .text-field__title {
+  display: block;
   margin-left: 23px;
   margin-bottom: 17px;
   font-size: 14px;
   line-height: 30px;
   color: $base-red;
   text-transform: uppercase;
+
+  @include tablet {
+    margin: 0 20px 0 0;
+  }
 }

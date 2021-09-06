@@ -1,0 +1,51 @@
+/* stylelint-disable property-no-vendor-prefix */
+@mixin track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  background: $base-background;
+}
+
+@mixin thumb {
+  width: 14px;
+  height: 14px;
+  border: 2px solid $base-red;
+  border-radius: 50%;
+  background: $base-white;
+  cursor: pointer;
+  -webkit-appearance: none;
+  transform: translateY(-50%);
+
+  &:active {
+    background: $base-red;
+  }
+}
+
+.range {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 2px;
+  margin: 0;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::-webkit-slider-runnable-track {
+    @include track;
+  }
+
+  &::-moz-range-track {
+    @include track;
+  }
+
+  &::-webkit-slider-thumb {
+    @include thumb;
+  }
+
+  &::-moz-range-thumb {
+    @include thumb;
+    transform: translateY(0);
+  }
+}
+/* stylelint-enable property-no-vendor-prefix */

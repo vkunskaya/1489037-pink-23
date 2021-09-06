@@ -1,8 +1,27 @@
 .contest-section {
-  padding-top: 54px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 48px;
 }
 
 .contest-section__title {
   margin: 0;
-  padding: 0 20px;
+
+  @include tablet {
+    max-width: 530px;
+    font-size: 18px;
+  }
+
+  @include desktop {
+    max-width: 796px;
+  }
+
+  span {
+    display: none;
+
+    @include tablet {
+      display: inline;
+    }
+  }
 }
