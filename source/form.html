@@ -116,11 +116,13 @@
 
         <fieldset class="contest-form__fieldset contest-form__user-contacts">
           <legend>Контактная информация</legend>
-          <label class="text-field contest-form__text-field contest-form__text-field--with-icon contest-form__text-field--phone-icon">
+          <label
+            class="text-field contest-form__text-field contest-form__text-field--with-icon contest-form__text-field--phone-icon">
             <span class="text-field__title">Номер телефона</span>
             <input type="tel" name="phone" placeholder="Номер, пожалуйста">
           </label>
-          <label class="text-field contest-form__text-field contest-form__text-field--with-icon contest-form__text-field--mail-icon">
+          <label
+            class="text-field contest-form__text-field contest-form__text-field--with-icon contest-form__text-field--mail-icon">
             <span class="text-field__title">Адрес почты</span>
             <input type="email" name="name" placeholder="Введите почту *" required>
           </label>
@@ -146,14 +148,17 @@
 
         <fieldset class="contest-form__fieldset contest-form__user-emotions">
           <legend>Опишите свои эмоции</legend>
-          <textarea class="textarea contest-form__textarea" name="emotions"
-            placeholder="Можно прям в красках, не стесняясь в выражениях"
-            aria-label="Мы будем благодарны вам за отзыв"></textarea>
+          <label class="text-field">
+            <textarea class="contest-form__textarea" name="emotions"
+              placeholder="Можно прям в красках, не стесняясь в выражениях"
+              aria-label="Мы будем благодарны вам за отзыв"></textarea>
+          </label>
         </fieldset>
         <div class="contest-form__send-button-wrapper">
           <button type="submit" class="button contest-form__send-button"> Отправить форму</button>
-          <p class="paragraph paragraph--high contest-form__hint"><span>*</span> — обязательные поля</p>
-          <p class="paragraph paragraph--high contest-form__hint contest-form__hint--desktop"><span>*</span> — обязательные для заполнения поля</p>
+          <p class="paragraph paragraph--high contest-form__hint"><span>*</span> — обязательные
+            <span class="contest-form__desktop-hint-part"> для заполнения</span> поля
+          </p>
         </div>
       </form>
     </section>

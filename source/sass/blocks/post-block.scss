@@ -18,8 +18,9 @@
   }
 
   @include desktop {
+    width: 940px;
     background-color: $base-grey-background;
-    padding: 57px 80px 57px 100px;
+    padding: 57px 60px 57px 80px;
   }
 }
 

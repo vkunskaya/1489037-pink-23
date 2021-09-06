@@ -63,7 +63,9 @@
 
     @include desktop {
       position: absolute;
-      left: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1200px;
     }
 
     img {
@@ -74,9 +76,8 @@
         min-height: 509px;
       }
 
-      @media (min-width: $desktop-width) {
-        position: absolute;
-        left: 0;
+      @media (min-width: $tablet-width) {
+        height: 506px;
       }
     }
 
@@ -94,9 +95,16 @@
       font-weight: 700;
       color: $base-white;
       background-color: $base-red;
+      text-align: center;
+      text-transform: uppercase;
 
       @media (min-width: $tablet-width) {
         top: 57px;
+      }
+
+      @media (min-width: $desktop-width) {
+        top: 54px;
+        right: 130px;
       }
     }
   }
