@@ -9,13 +9,37 @@
   display: inline-flex;
 
   &:not(:last-child) {
-    margin-right: 14px;
+    margin-right: 8px;
+  }
+
+  &:nth-child(1) .socials__link {
+    background-image: url("../img/twitter.svg");
+  }
+
+  &:nth-child(2) .socials__link {
+    background-image: url("../img/facebook.svg");
+  }
+
+  &:nth-child(3) .socials__link {
+    background-image: url("../img/youtube.svg");
   }
 }
 
 .socials__link {
-  width: 48px;
-  height: 48px;
+  width: 54px;
+  height: 54px;
   border-radius: 50%;
   border: 3px solid rgba($base-background, 0.1);
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &:hover,
+  &:focus {
+    border-color: $base-background;
+  }
+
+  &:active {
+    border-color: rgba($base-background, 0.1);
+    opacity: 0.3;
+  }
 }

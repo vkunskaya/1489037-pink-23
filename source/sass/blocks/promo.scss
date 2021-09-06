@@ -5,20 +5,21 @@
   min-height: 667px;
   background: url("../img/phone.png") no-repeat,
     url("../img/back-tablet.jpg") no-repeat;
-  background-position: bottom 272px center, top left;
+  background-position: bottom 272px left, top left;
   background-size: auto 286px, cover;
   background-color: $base-background;
 
   @include tablet {
     justify-content: flex-start;
     align-items: flex-start;
-    min-width: 619px;
+    min-height: 619px;
     background-position: right bottom, top;
-    background-size: auto 80%, cover;
+    background-size: auto 89%, cover;
   }
 
   @include desktop {
     background-position: 70% bottom, top;
+    min-height: 743px;
   }
 }
 
@@ -27,24 +28,26 @@
   margin-top: 25px;
 
   @include tablet {
-    margin-top: 102px;
+    margin-top: 94px;
     flex-grow: 0;
     width: 100%;
   }
 
   @include desktop {
+    margin-top: 99px;
     width: 980px;
   }
 }
 
 .promo__slogan {
+  margin: 0;
   max-width: 280px;
   color: $base-white;
   text-align: center;
 
   @include tablet {
-    padding-left: 20px;
-    padding-right: 20px;
+    margin-left: 10px;
+    padding-inline: 20px;
     line-height: 48px;
   }
 

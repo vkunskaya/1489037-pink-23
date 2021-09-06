@@ -1,24 +1,60 @@
 .main-nav {
   background-color: rgba($base-black, 0.3);
+  position: relative;
 
-  &--opened {
+  &--opened,
+  &--nojs {
     background-color: $base-background;
+
+    .main-nav__top-container {
+      padding-right: 13px;
+      background-color: $base-background;
+      box-shadow: 0 1px 0 $base-black;
+    }
+
+    .main-nav__list {
+      display: block;
+    }
+  }
+
+  &--nojs {
+    padding-bottom: 252px;
+
+    @include desktop {
+      padding-bottom: 0;
+      background-color: rgba($base-black, 0.3);
+    }
+
+    .main-nav__top-container {
+      padding-right: 0;
+      background-color: $base-transparent;
+      box-shadow: none;
+    }
+
+    .main-nav__toggle {
+      display: none;
+    }
+
+    .main-nav__list {
+      top: 65px;
+
+      @media (min-width: $tablet-width) {
+        top: 110px;
+      }
+
+      @media (min-width: $desktop-width) {
+        display: flex;
+      }
+    }
   }
 }
 
 .main-nav__top-container {
-  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   padding: 21px 20px;
-
-  &--opened {
-    padding-right: 13px;
-    background-color: $base-background;
-    box-shadow: 0 1px 0 $base-black;
-  }
 
   @include tablet {
     padding-top: 27px;
@@ -27,11 +63,13 @@
 }
 
 .main-nav__logo {
-  font-size: 0;
+  line-height: 0;
 }
 
 .main-nav__logo-icon {
   display: none;
+  width: 147px;
+  height: 40px;
   cursor: pointer;
 
   &:hover,
@@ -54,6 +92,8 @@
 
   &--mobile {
     display: inline;
+    width: auto;
+    height: auto;
 
     @include tablet {
       display: none;
@@ -62,43 +102,80 @@
 }
 
 .main-nav__toggle {
-  padding: 0;
+  position: relative;
   width: 50px;
   height: 24px;
+  padding: 0;
   border: none;
   background-color: $base-transparent;
   cursor: pointer;
+
+  @include tablet {
+    align-self: flex-end;
+  }
 
   &:active {
     opacity: 0.3;
   }
 
-  .main-nav__close-icon {
-    display: none;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: $base-white;
+    border-radius: 1px;
+    box-shadow: 0 10px 0 0 $base-white, 0 20px 0 0 $base-white;
+  }
+
+  &:hover,
+  &:focus {
+    &::after {
+      background-color: $base-red;
+      box-shadow: 0 10px 0 0 $base-red, 0 20px 0 0 $base-red;
+    }
   }
 
   &--active {
     width: 43px;
-    height: 23px;
 
-    .main-nav__open-icon {
-      display: none;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 32px;
+      height: 2px;
+      background-color: $base-white;
     }
 
-    .main-nav__close-icon {
-      display: inline;
+    &::before {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    &::after {
+      transform: translate(-50%, -50%) rotate(45deg);
+      box-shadow: none;
+    }
+
+    &:hover::before,
+    &:focus::before,
+    &:hover::after,
+    &:focus::after {
+      background-color: $base-red;
+    }
+
+    &:hover::after,
+    &:focus::after {
+      box-shadow: none;
     }
   }
 
   @include desktop {
     display: none;
-  }
-}
-
-.main-nav__toggle-icon {
-  &:hover path,
-  &:focus path {
-    fill: $base-red;
   }
 }
 
@@ -111,14 +188,12 @@
   top: 100%;
   background-color: $base-background;
 
-  &--opened {
-    display: block;
-  }
-
   @include desktop {
     position: static;
     display: flex;
     justify-content: flex-end;
+    align-self: flex-end;
+    margin-bottom: 4px; // PP
     width: 770px;
     background-color: $base-transparent;
   }
@@ -134,16 +209,18 @@
   }
 
   &--current {
-    text-decoration-line: underline;
-    text-decoration-thickness: 2px;
-    text-decoration-color: $base-white;
-    text-underline-offset: 15px;
+    @include tablet {
+      text-decoration-line: underline;
+      text-decoration-thickness: 2px;
+      text-decoration-color: $base-white;
+      text-underline-offset: 15px;
+    }
   }
 
   a {
     display: block;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     font-weight: 700;
     font-size: 18px;
     line-height: 32px;

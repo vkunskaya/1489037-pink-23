@@ -1,38 +1,59 @@
 .contacts {
-  padding-top: 40px;
+  padding-top: 41px;
+
+  @include tablet {
+    padding-top: 43px;
+  }
 
   @include desktop {
-    padding-top: 60px;
+    padding-top: 59px;
   }
 }
 
 .contacts__intro-text {
   margin: 0;
   text-align: center;
+
+  @include tablet {
+    line-height: 55px;
+  }
+
+  @include desktop {
+    line-height: 68px;
+  }
 }
 
 .contacts__list {
   @include clear-list;
-  margin-top: 30px;
-  margin-bottom: 4px;
+  margin-top: 33px;
+  margin-bottom: 35px;
 
   @include tablet {
+    margin-top: 32px;
+    margin-bottom: 23px;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    column-gap: 20px;
   }
 
   @include desktop {
-    margin-top: 55px;
-    margin-bottom: 20px;
+    margin-top: 40px;
+    margin-bottom: 12px;
   }
 }
 
 .contacts__item {
-  padding: 0 20px 21px;
+  padding: 0 20px;
 
   &:not(:last-child) {
     margin-bottom: 20px;
+
+    @include tablet {
+      margin-bottom: 41px;
+      flex: auto;
+      padding: 0;
+    }
   }
 
   @include tablet {
@@ -61,10 +82,19 @@
 
 .contacts__contact-point {
   display: block;
-  margin-top: 5px;
   color: $base-red;
   text-align: center;
   text-decoration-line: none;
+
+  @include tablet {
+    margin-top: 5px;
+    font-size: 24px;
+    line-height: 33px;
+  }
+
+  @include desktop {
+    margin-top: 21px;
+  }
 
   &--link:hover,
   &--link:focus,
@@ -76,16 +106,20 @@
   &--link:active {
     opacity: 0.3;
   }
-
-  @include tablet {
-    font-size: 24px;
-    line-height: 33px;
-  }
 }
 
 .contacts__map-wrapper {
   display: flex;
-  clip-path: polygon(50% 12%, 100% 0, 100% 100%, 0 100%, 0 0);
+  clip-path: polygon(50% 16%, 100% 0, 100% 100%, 0 100%, 0 0);
+
+
+  @include tablet {
+    clip-path: polygon(50% 18%, 100% 0, 100% 100%, 0 100%, 0 0);
+  }
+
+  @include desktop {
+    clip-path: polygon(50% 20%, 100% 0, 100% 100%, 0 100%, 0 0);
+  }
 
   iframe {
     width: 100%;
