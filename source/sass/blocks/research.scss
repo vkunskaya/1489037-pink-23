@@ -9,13 +9,24 @@
   }
 
   @include desktop {
-    padding-top: 17px;
-    padding-bottom: 67px;
+    padding-top: 8px;
+    padding-bottom: 68px;
     background-color: $base-grey-background;
   }
 }
 
 .research__container {
+  @include tablet {
+    display: grid;
+    grid-template-columns: 238px 1fr;
+    gap: 72px;
+  }
+
+  @include desktop {
+    grid-template-columns: 298px 1fr;
+    gap: 71px;
+  }
+
   &::before {
     @include tablet {
       content: "";
@@ -31,27 +42,18 @@
       height: 345px;
     }
   }
-
-  @include tablet {
-    display: grid;
-    grid-template-columns: 238px 1fr;
-    gap: 72px;
-    align-items: flex-end;
-  }
-
-  @include desktop {
-    grid-template-columns: 298px 1fr;
-    gap: 71px;
-  }
 }
 
 .research__text {
   @include tablet {
+    padding-top: 42px;
     padding-bottom: 29px;
   }
 
   @include desktop {
-    padding-bottom: 53px;
+    margin-top: auto;
+    padding-top: 0;
+    padding-bottom: 45px;
     padding-right: 36px;
   }
 }
@@ -60,14 +62,16 @@
   margin: 0;
 
   @include tablet {
-    width: 168px;
     font-size: 30px;
     line-height: 36px;
   }
 
   @include desktop {
-    width: auto;
     line-height: 30px;
+
+    br {
+      display: none;
+    }
   }
 }
 
@@ -75,25 +79,30 @@
   margin: 0;
 
   @include tablet {
-    margin-top: 20px;
+    margin-top: 10px;
+    padding-right: 10px;
   }
 
   @include desktop {
-    margin-top: 30px;
+    margin-top: 26px;
     font-size: 18px;
     line-height: 30px;
+
+    br {
+      display: none;
+    }
   }
 }
 
 .research__link {
   @include tablet {
-    margin-top: 20px;
+    margin-top: 10px;
     display: block;
     color: $base-red;
   }
 
   @include desktop {
-    margin-top: 40px;
+    margin-top: 28px;
     font-size: 18px;
     line-height: 30px;
   }
