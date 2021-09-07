@@ -1,31 +1,46 @@
 .photo-section {
-  padding: 48px 0 52px;
+  padding: 44px 0 42px;
 
   @include tablet {
-    padding: 90px 0 70px;
+    padding: 92px 0 70px;
+  }
+
+  @include desktop {
+    padding-bottom: 65px;
   }
 }
 
 .photo-section__title {
   margin: 0;
-  padding-inline: 15px;
+  padding-inline: 13px;
 
   @include tablet {
     font-size: 18px;
+    padding-inline: 25px;
+
+    br {
+      display: none;
+    }
+  }
+
+  @include desktop {
+    br {
+      display: initial;
+    }
   }
 }
 
 .photo-section__list {
-  margin-top: 54px;
-  margin-bottom: 49px;
+  margin-top: 50px;
+  margin-bottom: 39px;
 
   @include tablet {
-    margin-top: 80px;
-    margin-bottom: 70px;
+    margin-top: 77px;
+    margin-bottom: 64px;
   }
 
   @include desktop {
-    margin-top: 90px;
+    margin-top: 88px;
     margin-bottom: 60px;
   }
 }

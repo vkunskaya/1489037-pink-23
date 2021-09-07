@@ -3,14 +3,15 @@
   padding: 0;
 
   @include tablet {
-    margin-top: 36px;
+    margin-top: 38px;
     display: grid;
     grid-template-columns: 1fr;
   }
 
   @include desktop {
-    margin-top: 80px;
+    margin-top: 71px;
     grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
     max-width: 980px;
   }
 }
@@ -18,23 +19,22 @@
 .contest-form__fieldset {
   display: flex;
   flex-direction: column;
-  padding-top: 42px;
-  padding-bottom: 44px;
+  padding-top: 34px;
+  padding-bottom: 42px;
   margin-inline: 0;
   padding-inline: 20px;
   border: none;
 
   @include tablet {
-    padding-inline: 60px;
+    padding-inline: 58px;
 
     &:first-of-type {
       padding-inline: 20px;
     }
 
     &:not(:first-of-type) {
-      margin-right: 20px;
-      margin-left: 20px;
-      margin-bottom: 70px;
+      margin-inline: 20px;
+      margin-bottom: 58px;
       border: 2px solid $base-grey;
     }
   }
@@ -42,37 +42,34 @@
   @include desktop {
     grid-column: 1 / -1;
     padding-top: 34px;
-
-    &:not(:first-of-type) {
-      margin-bottom: 65px;
-    }
   }
 
   legend {
-    float: left;
-    margin: 0;
-    padding: 0 30px;
+    position: relative;
+    top: 57px;
+    margin: 0 auto;
+    padding: 0 31px;
     line-height: 18px;
     color: $base-red;
     text-align: center;
     text-transform: uppercase;
 
     @include tablet {
-      float: none;
+      position: static;
     }
   }
 }
 
 .contest-form__text-field {
   &:not(:first-of-type) {
-    margin-top: 29px;
+    margin-top: 18px;
 
     @include tablet {
-      margin-top: 56px;
+      margin-top: 53px;
     }
 
     @include desktop {
-      margin-top: 58px;
+      margin-top: 54px;
     }
   }
 
@@ -99,7 +96,11 @@
     span {
       @media (min-width: $tablet-width) {
         order: 2;
-        margin: 16px 0 0 18px;
+        margin: 12px 0 0 19px;
+      }
+
+      @media (min-width: $desktop-width) {
+        margin: 10px 0 0 18px;
       }
     }
 
@@ -107,8 +108,8 @@
       @media (min-width: $tablet-width) {
         content: "";
         position: absolute;
-        top: 0;
-        right: 0;
+        top: 2px;
+        right: 2px;
         display: block;
         width: 59px;
         height: 59px;
@@ -138,14 +139,20 @@
 
 .contest-form__check-list {
   @include clear-list;
-  margin-top: 44px;
+  margin-top: 59px;
+
+  @include tablet {
+    margin-top: 40px;
+  }
 
   @include desktop {
     display: grid;
     grid-template-columns: repeat(3, max-content);
+    grid-template-rows: repeat(2, 1fr);
+    grid-auto-flow: column;
     align-items: center;
-    row-gap: 47px;
-    column-gap: 58px;
+    row-gap: 45px;
+    column-gap: 57px;
   }
 }
 
@@ -153,7 +160,7 @@
   color: $base-text;
 
   &:not(:first-child) {
-    margin-top: 47px;
+    margin-top: 43px;
 
     @include desktop {
       margin-top: 0;
@@ -163,15 +170,14 @@
 
 .contest-form__radio-list {
   @include clear-list;
-  margin-top: 40px;
+  margin-top: 56px;
 
   @include tablet {
-    margin-top: 12px;
+    margin-top: 10px;
   }
 
   @include desktop {
-    padding-left: 74px;
-    padding-right: 74px;
+    padding-inline: 72px;
   }
 }
 
@@ -179,23 +185,31 @@
   color: $base-text;
 
   &:not(:first-child) {
-    margin-top: 38px;
+    margin-top: 35px;
+
+    @include tablet {
+      margin-top: 34px;
+    }
+
+    @include desktop {
+      margin-top: 36px;
+    }
   }
 }
 
 .contest-form__textarea {
-  margin-top: 22px;
-  height: 197px;
+  margin-top: 16px;
+  height: 201px;
   color: $base-text;
 
   @include tablet {
     margin-top: 0;
-    height: 189px;
+    height: 193px;
   }
 
   @include desktop {
     margin-top: 0;
-    height: 189px;
+    height: 128px;
   }
 
   &::placeholder {
@@ -204,16 +218,18 @@
 }
 
 .contest-form__user-info {
+  padding-bottom: 26px;
+
   @include tablet {
     order: 1;
     width: 100%;
-    padding-bottom: 60px;
+    padding-bottom: 59px;
   }
 
   @include desktop {
     grid-column: 1 / 2;
     width: auto;
-    padding-top: 11px;
+    padding-top: 14px;
   }
 }
 
@@ -222,16 +238,23 @@
 
   @include tablet {
     order: 4;
-    padding-top: 0;
-    padding-bottom: 50px;
+    padding-top: 3px;
+    padding-bottom: 49px;
     background-color: $base-white;
+  }
+
+  @include desktop {
+    padding-bottom: 55px;
   }
 }
 
 .contest-form__user-contacts {
+  padding-top: 32px;
+  padding-bottom: 26px;
+
   @include tablet {
     order: 3;
-    padding-top: 40px;
+    padding-top: 36px;
     padding-bottom: 28px;
   }
 
@@ -240,8 +263,9 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-inline: 59px;
+    padding-top: 33px;
+    padding-bottom: 13px;
   }
 
   legend {
@@ -258,6 +282,7 @@
 
   @include tablet {
     order: 2;
+    padding-bottom: 53px;
     background-color: $base-white;
   }
 
@@ -269,9 +294,26 @@
 }
 
 .contest-form__user-emotions {
+  padding-top: 37px;
+  padding-bottom: 42px;
+
   @include tablet {
     order: 5;
-    padding-bottom: 53px;
+    padding-top: 36px;
+    padding-bottom: 51px;
+  }
+
+  @include desktop {
+    padding-top: 33px;
+    padding-bottom: 43px;
+  }
+
+  legend {
+    top: 37px;
+  }
+
+  .text-field {
+    line-height: 0;
   }
 }
 
@@ -284,11 +326,15 @@
 }
 
 .contest-form__hint {
+  margin: 0;
+  margin-top: 34px;
   text-align: center;
   text-transform: uppercase;
 
   @include tablet {
     flex: 1;
+    margin-top: 0;
+    padding-left: 30px;
     text-align: end;
   }
 
@@ -306,19 +352,22 @@
 }
 
 .contest-form__send-button-wrapper {
-  padding-left: 20px;
-  padding-right: 20px;
+  margin-top: 6px;
+  padding-inline: 20px;
 
   @include tablet {
     order: 6;
-    margin-bottom: 50px;
+    margin-top: 9px;
+    margin-bottom: 35px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    padding-inline: 22px;
   }
 
   @include desktop {
+    margin-top: 5px;
     margin-bottom: 0;
     grid-column: 1 / -1;
   }

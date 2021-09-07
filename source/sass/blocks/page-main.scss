@@ -16,6 +16,21 @@
     min-height: 284px;
     background-position: center;
   }
+
+  &--inner {
+    padding-top: 28px;
+    padding-bottom: 28px;
+
+    @include tablet {
+      padding-top: 66px;
+      padding-bottom: 33px;
+    }
+
+    @include desktop {
+      padding-top: 59px;
+      padding-bottom: 40px;
+    }
+  }
 }
 
 .page-main__title {
