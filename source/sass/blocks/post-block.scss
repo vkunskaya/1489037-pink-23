@@ -2,6 +2,7 @@
   background-color: $base-grey-background;
 
   @include desktop {
+    padding-bottom: 30px;
     background-color: $base-white;
   }
 }
@@ -20,7 +21,7 @@
   @include desktop {
     width: 940px;
     background-color: $base-grey-background;
-    padding: 57px 60px 57px 80px;
+    padding: 47px 60px 57px 80px;
   }
 }
 
@@ -34,6 +35,7 @@
 
   @include desktop {
     margin-right: 90px;
+    margin-top: 10px;
   }
 }
 
@@ -60,7 +62,7 @@
   position: relative;
   display: flex;
   justify-content: center;
-  height: 125px;
+  height: 127px;
   padding-top: 42px;
 
   @include tablet {
@@ -75,23 +77,32 @@
   padding: 0;
   border: none;
 
+  margin-inline: 17px;
   display: flex;
   flex-direction: column;
 
   @include tablet {
+    margin-inline: 0;
     flex-direction: row;
     align-items: center;
-    padding-top: 10px;
-    padding-bottom: 24px;
+    padding-top: 9px;
+    padding-bottom: 23px;
     border-bottom: 1px solid rgba($base-background, 0.1);
   }
 
-  &:not(:first-of-type) {
-    margin-left: 35px;
+  @include desktop {
+    padding-top: 2px; // PP
+    padding-bottom: 7px;
+  }
 
+  &:not(:first-of-type) {
     @include tablet {
       margin-left: 0;
-      padding-top: 27px;
+      padding-top: 24px;
+    }
+
+    @include desktop {
+      padding-top: 9px;
     }
   }
 
@@ -104,7 +115,7 @@
   input {
     display: none;
     position: absolute;
-    left: 0;
+    left: 20px;
     bottom: 0;
 
     @include tablet {
@@ -129,19 +140,24 @@
   background-color: $base-transparent;
   border: none;
   cursor: pointer;
-  width: 48px;
+  width: 44px;
   height: 44px;
 
   @include tablet {
-    width: 24px;
-    height: 22px;
-    margin-right: 29px;
+    width: 23px;
+    height: 23px;
+    margin-right: 30px;
   }
 
   @include desktop {
-    width: 48px;
-    height: 44px;
-    margin-right: 48px;
+    width: 55px;
+    height: 55px;
+    margin-right: 44px;
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
   }
 
   path {
@@ -166,6 +182,10 @@
   @include tablet {
     margin-right: 18px;
   }
+
+  @include desktop {
+    margin-right: 30px;
+  }
 }
 
 .post-block__buttons-container {
@@ -183,10 +203,12 @@
     border-top: none;
     margin-top: 0;
     padding-inline: 0;
+    padding-right: 13px;
   }
 
   @include desktop {
     display: flex;
+    padding-right: 0;
   }
 }
 
@@ -221,6 +243,10 @@
     color: $base-white;
     background-color: $base-background;
     opacity: 0.3;
+  }
+
+  @include tablet {
+    margin-top: 22px;
   }
 
   @include desktop {

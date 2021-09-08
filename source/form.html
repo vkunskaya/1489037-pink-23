@@ -14,7 +14,7 @@
 
 <body class="page__body">
   <header class="page-header">
-    <nav class="main-nav">
+    <nav class="main-nav main-nav--nojs">
       <div class="content-wrapper main-nav__top-container">
         <a class="main-nav__logo">
           <svg class="main-nav__logo-icon main-nav__logo-icon--mobile" width="74" height="23" fill="none"
@@ -23,7 +23,8 @@
               d="M0 1.55A1.29 1.29 0 011.26.26h7.13c5.06 0 8.39 2.7 8.39 7.13v.06c0 4.85-4.04 7.36-8.8 7.36H2.53v6.8A1.28 1.28 0 011.27 23 1.27 1.27 0 010 21.61V1.55zm8.07 10.97c3.7 0 6.14-2 6.14-4.99v-.06c0-3.2-2.4-4.87-5.96-4.87H2.6v9.88l5.48.04zM21.6 1.39A1.28 1.28 0 0122.85 0a1.27 1.27 0 011.27 1.39V21.6A1.28 1.28 0 0122.86 23a1.27 1.27 0 01-1.27-1.39V1.4zM30.67 1.42A1.28 1.28 0 0131.93.17h.34a1.54 1.54 0 011.29.74l13.6 17.4V1.36A1.24 1.24 0 0148.39.12a1.23 1.23 0 011.23 1.24v20.3a1.14 1.14 0 01-1.15 1.17h-.13a1.7 1.7 0 01-1.31-.78L33.12 4.25v17.4a1.26 1.26 0 01-1.2 1.25 1.23 1.23 0 01-1.2-1.25V1.42h-.05zM55.94 1.39A1.28 1.28 0 0157.2 0a1.27 1.27 0 011.26 1.39v12.3L71.23.54c.26-.27.62-.43 1-.45a1.27 1.27 0 011.21 1.26 1.29 1.29 0 01-.41.9l-7.95 7.9 8.57 10.52c.23.26.35.6.35.94a1.31 1.31 0 01-1.34 1.28 1.23 1.23 0 01-1-.58L63.3 11.86l-4.83 4.85v4.88a1.27 1.27 0 01-1.26 1.27 1.26 1.26 0 01-1.26-1.27V1.4h-.01z"
               fill="#fff" />
           </svg>
-          <svg class="main-nav__logo-icon" width="145" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="main-nav__logo-icon" width="145" height="40" viewbox="0 0 145 40" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd"
               d="M53.892 6.586l5.038 21.145a1.418 1.418 0 01-.22 1.297 1.356 1.356 0 01-1.183.535H53.52c-.69 5.812-5.57 10.315-11.489 10.315-5.917 0-10.798-4.503-11.488-10.314h-1.965C27.887 35.442 22.953 40 16.968 40c-5.994 0-10.934-4.573-11.612-10.466H1.45a1.364 1.364 0 01-1.154-.536 1.418 1.418 0 01-.24-1.267L5.106 6.586C5.455 4.26 7.639 0 13.486 0c.388 0 .76.157 1.034.435.274.279.428.657.428 1.05 0 .395-.154.772-.428 1.051a1.45 1.45 0 01-1.034.435c-4.707 0-5.438 3.694-5.497 4.1L3.341 26.602h2.034c.746-5.817 5.652-10.31 11.593-10.31 5.939 0 10.843 4.488 11.593 10.3l1.998.01c.745-5.75 5.598-10.189 11.473-10.189 5.886 0 10.746 4.456 11.477 10.222v-.053h2.137l-4.639-19.51c-.068-.407-.77-4.1-5.497-4.1a1.45 1.45 0 01-1.033-.436 1.498 1.498 0 01-.428-1.05c0-.394.154-.772.428-1.05A1.45 1.45 0 0145.51 0c5.848 0 8.03 4.259 8.382 6.586zm-28.22 22.977a9.122 9.122 0 00-.022-2.97c-.725-4.195-4.336-7.383-8.681-7.383-4.349 0-7.961 3.192-8.683 7.391a9.114 9.114 0 00-.025 2.94c.66 4.273 4.308 7.541 8.707 7.541 4.392 0 8.034-3.257 8.704-7.518zm24.942 0c.073-.461.112-.934.112-1.417 0-4.868-3.893-8.815-8.694-8.815-4.802 0-8.695 3.947-8.695 8.815 0 .482.039.956.112 1.418.669 4.194 4.257 7.397 8.583 7.397 4.325 0 7.913-3.203 8.582-7.397z"
               fill="#fff" />
@@ -32,19 +33,7 @@
               fill="#fff" />
           </svg>
         </a>
-        <button class="main-nav__toggle" type="button" aria-label="Открыть меню">
-          <svg class="main-nav__toggle-icon main-nav__open-icon" width="50" height="24" fill="none"
-            xmlns="http://www.w3.org/2000/svg" aria-hidden=true>
-            <path
-              d="M1.14 0C.99 0 .84.02.7.07S.43.2.33.3A.88.88 0 000 1v2c0 .27.12.52.33.7.22.2.5.3.8.3h47.73c.15 0 .3-.02.44-.07s.27-.12.37-.22A.88.88 0 0050 3V1a.94.94 0 00-.33-.7c-.22-.2-.5-.3-.8-.3H1.13zm0 10c-.15 0-.3.02-.44.07s-.27.12-.37.22A.88.88 0 000 11v2c0 .27.12.52.33.7.22.2.5.3.8.3h47.73c.15 0 .3-.02.44-.07s.27-.12.37-.22A.88.88 0 0050 13v-2a.94.94 0 00-.33-.7c-.22-.2-.5-.3-.8-.3H1.13zm0 10c-.15 0-.3.02-.44.07s-.27.12-.37.22A.88.88 0 000 21v2c0 .27.12.52.33.7.22.2.5.3.8.3h47.73c.15 0 .3-.02.44-.07s.27-.12.37-.22A.88.88 0 0050 23v-2a.94.94 0 00-.33-.7c-.22-.2-.5-.3-.8-.3H1.13z"
-              fill="#fff" />
-          </svg>
-          <svg class="main-nav__toggle-icon main-nav__close-icon" width="23" height="23" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <path d="M20.85 0L0 20.85 2.15 23 23 2.15 20.85 0z" fill="#fff" />
-            <path d="M2.15 0L0 2.15 20.85 23 23 20.85 2.15 0z" fill="#fff" />
-          </svg>
-        </button>
+        <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
         <ul class="main-nav__list">
           <li class="main-nav__list-item"><a href="index.html">Главная</a></li>
           <li class="main-nav__list-item"><a href="catalog.html">Фотографии</a></li>
@@ -55,7 +44,7 @@
     </nav>
   </header>
   <main class="page-main">
-    <div class="page-main__title-wrapper">
+    <div class="page-main__title-wrapper page-main__title-wrapper--inner">
       <div class="content-wrapper">
         <h1 class="intro-text intro-text--high page-main__title">
           Конкурс на самое безбашенное путешествие с Пинк
@@ -215,6 +204,18 @@
       <button class="button modal__button" type="button">Закрыть окно</button>
     </div>
   </section>
+
+  <script>
+    const navMain = document.querySelector(".main-nav");
+    const menuButton = navMain.querySelector(".main-nav__toggle");
+
+    navMain.classList.remove("main-nav--nojs");
+
+    menuButton.addEventListener('click', () => {
+      navMain.classList.toggle('main-nav--opened');
+      menuButton.classList.toggle('main-nav__toggle--active');
+    });
+  </script>
 </body>
 
 </html>

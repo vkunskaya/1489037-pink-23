@@ -9,7 +9,8 @@
   input,
   textarea {
     width: 100%;
-    padding: 13px 20px;
+    padding: 14px 20px;
+    font-family: "Open Sans", "Arial", sans-serif;
     font-size: 18px;
     line-height: 30px;
     color: $base-text;
@@ -32,7 +33,7 @@
   }
 
   textarea {
-    padding: 23px 20px;
+    padding: 13px 20px;
     resize: none;
 
     &::placeholder {
@@ -46,7 +47,7 @@
 .text-field__title {
   display: block;
   margin-left: 23px;
-  margin-bottom: 17px;
+  margin-bottom: 5px;
   font-size: 14px;
   line-height: 30px;
   color: $base-red;
