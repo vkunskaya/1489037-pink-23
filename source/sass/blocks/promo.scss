@@ -3,23 +3,36 @@
   flex-direction: column;
   justify-content: space-between;
   min-height: 667px;
-  background: url("../img/phone.png") no-repeat,
-    url("../img/back-tablet.jpg") no-repeat;
-  background-position: bottom 272px left, top left;
-  background-size: auto 286px, cover;
-  background-color: $base-background;
+  background: url("../img/phone-mobile.png") no-repeat;
+  background-position: bottom 271px left;
+  background-size: auto 286px;
+
+  @include retina {
+    background-image: url("../img/phone-mobile@2x.png");
+  }
 
   @include tablet {
     justify-content: flex-start;
     align-items: flex-start;
     min-height: 619px;
-    background-position: right bottom, top;
-    background-size: auto 89%, cover;
+    background-image: url("../img/phone-tablet.png");
+    background-size: auto 545px;
+    background-position: right bottom;
+
+    @include retina {
+      background-image: url("../img/phone-tablet@2x.png");
+    }
   }
 
   @include desktop {
-    background-position: 70% bottom, top;
+    background-image: url("../img/phone-desktop.png");
+    background-size: auto 645px;
+    background-position: 78% bottom;
     min-height: 743px;
+
+    @include retina {
+      background-image: url("../img/phone-desktop@2x.png");
+    }
   }
 }
 
