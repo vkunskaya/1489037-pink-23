@@ -27,7 +27,7 @@
   @include desktop {
     background-image: url("../img/phone-desktop.png");
     background-size: auto 645px;
-    background-position: 78% bottom;
+    background-position: calc(50% + 171px) bottom;
     min-height: 743px;
 
     @include retina {

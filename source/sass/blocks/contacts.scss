@@ -111,14 +111,29 @@
 .contacts__map-wrapper {
   display: flex;
   clip-path: polygon(50% 16%, 100% 0, 100% 100%, 0 100%, 0 0);
+  background: url("../../img/map-mobile.png") no-repeat;
+  background-size: contain;
 
+  @include retina {
+    background-image: url("../../img/map-mobile@2x.png");
+  }
 
   @include tablet {
     clip-path: polygon(50% 18%, 100% 0, 100% 100%, 0 100%, 0 0);
+    background-image: url("../../img/map-tablet.png") no-repeat;
+
+    @include retina {
+      background-image: url("../../img/map-tablet@2x.png");
+    }
   }
 
   @include desktop {
     clip-path: polygon(50% 20%, 100% 0, 100% 100%, 0 100%, 0 0);
+    background-image: url("../../img/map-desktop.png") no-repeat;
+
+    @include retina {
+      background-image: url("../../img/map-desktop@2x.png");
+    }
   }
 
   iframe {
