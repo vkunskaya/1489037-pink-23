@@ -22,11 +22,7 @@
   display: block;
   text-align: center;
   line-height: 0;
-
-  &:hover,
-  &:active {
-    cursor: pointer;
-  }
+  cursor: pointer;
 
   &:hover path,
   &:focus path {
@@ -51,6 +47,38 @@
 
   @include desktop {
     justify-self: flex-start;
+  }
+}
+
+.page-footer__logo-icon {
+  color: $base-text;
+  fill: $base-red;
+
+  &:hover,
+  &:focus {
+    color: $base-red;
+  }
+
+  &:active {
+    color: $base-text;
+    opacity: 0.3;
+  }
+
+  @include desktop {
+    display: none;
+  }
+
+  &--desktop {
+    display: none;
+    fill: $base-red;
+
+    &:active {
+      fill: $base-red;
+    }
+
+    @include desktop {
+      display: block;
+    }
   }
 }
 

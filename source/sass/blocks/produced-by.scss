@@ -11,11 +11,12 @@
 }
 
 .produced-by__logo {
+  color: $base-red;
   margin-left: 15px;
 
-  &:hover path,
-  &:focus path {
-    fill: $base-text;
+  &:hover,
+  &:focus {
+    color: $base-text;
   }
 
   &:active {
