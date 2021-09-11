@@ -12,11 +12,11 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body class="page__body">
+<body class="page__body page__body--nojs">
   <header class="page-header">
     <nav class="main-nav main-nav--nojs">
       <div class="content-wrapper main-nav__top-container">
-        <a class="main-nav__logo">
+        <a class="main-nav__logo" href="index.html">
           <svg class="main-nav__logo-icon main-nav__logo-icon--mobile" width="74" height="23" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <path
@@ -206,9 +206,11 @@
   </section>
 
   <script>
+    const pageBody = document.querySelector(".page__body");
     const navMain = document.querySelector(".main-nav");
     const menuButton = navMain.querySelector(".main-nav__toggle");
 
+    pageBody.classList.remove("page__body--nojs");
     navMain.classList.remove("main-nav--nojs");
 
     menuButton.addEventListener('click', () => {

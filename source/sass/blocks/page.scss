@@ -10,4 +10,48 @@
   margin: 0;
   background-color: $base-white;
   color: $base-text;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 729px;
+    background: url("../img/back-mobile.jpg") top no-repeat;
+    background-color: $base-background;
+    background-size: 100% auto;
+
+    @include retina {
+      background-image: url("../img/back-mobile@2x.jpg");
+    }
+
+    @include tablet {
+      background-image: url("../img/back-tablet.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/back-tablet@2x.jpg");
+      }
+    }
+
+    @include desktop {
+      height: 853px;
+      background-image: url("../img/back-desktop.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/back-desktop@2x.jpg");
+      }
+    }
+  }
+
+  &--nojs {
+    &::before {
+      top: 255px;
+
+      @media (min-width: $tablet-width) {
+        top: 362px;
+      }
+    }
+  }
 }

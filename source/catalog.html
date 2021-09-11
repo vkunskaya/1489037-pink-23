@@ -12,11 +12,11 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body class="page__body">
+<body class="page__body page__body--nojs">
   <header class="page-header">
     <nav class="main-nav main-nav--nojs">
       <div class="content-wrapper main-nav__top-container">
-        <a class="main-nav__logo">
+        <a class="main-nav__logo" href="index.html">
           <svg class="main-nav__logo-icon main-nav__logo-icon--mobile" width="74" height="23" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <path
@@ -61,7 +61,14 @@
           <li class="photo-list__item photo-list__item--top">
             <figure class="photo-list__photo-block">
               <a href="#" class="photo-list__photo photo-list__photo--top" data-top="Панорама дня">
-                <img src="img/panorama.jpg" alt="Фото троллея высоко в горах" width="320" height="137">
+                <picture>
+                  <source media="(min-width: 1200px)"
+                    srcset="img/catalog/panorama-desktop.jpg 1x, img/catalog/panorama-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)"
+                    srcset="img/catalog/panorama-tablet.jpg 1x, img/catalog/panorama-tablet@2x.jpg 2x">
+                  <img src="img/catalog/panorama-mobile.jpg" srcset="img/catalog/panorama-mobile@2x.jpg 2x"
+                    alt="Фото троллея высоко в горах" width="320" height="137">
+                </picture>
               </a>
               <figcaption class="photo-list__info photo-list__info--top">
                 <p class="photo-list__post-title photo-list__post-title--top"><b>Анна</b> <span
@@ -82,7 +89,14 @@
           <li class="photo-list__item">
             <figure class="photo-list__photo-block">
               <a href="#" class="photo-list__photo">
-                <img src="img/photo-1.jpg" alt="Фотоcессия белого автомобиля" width="280" height="180">
+                <picture>
+                  <source media="(min-width: 1200px)"
+                    srcset="img/catalog/photo-1-desktop.jpg 1x, img/catalog/photo-1-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)"
+                    srcset="img/catalog/photo-1-tablet.jpg 1x, img/catalog/photo-1-tablet@2x.jpg 2x">
+                  <img src="img/photo-1-mobile.jpg" srcset="img/catalog/photo-1-mobile.jpg 2x"
+                    alt="Фотоcессия белого автомобиля" width="280" height="180">
+                </picture>
               </a>
               <figcaption class="photo-list__info">
                 <p class="photo-list__post-title"><b>Левон</b> <span class="photo-list__post-time">(5 часов
@@ -99,7 +113,14 @@
           <li class="photo-list__item">
             <figure class="photo-list__photo-block">
               <a href="#" class="photo-list__photo">
-                <img src="img/photo-2.jpg" alt="Фото акустической баранной установки" width="280" height="180">
+                <picture>
+                  <source media="(min-width: 1200px)"
+                    srcset="img/catalog/photo-2-desktop.jpg 1x, img/catalog/photo-2-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)"
+                    srcset="img/catalog/photo-2-tablet.jpg 1x, img/catalog/photo-2-tablet@2x.jpg 2x">
+                  <img src="img/photo-2-mobile.jpg" srcset="img/catalog/photo-2-mobile.jpg 2x"
+                    alt="Фото акустической баранной установки" width="280" height="180">
+                </picture>
               </a>
               <figcaption class="photo-list__info">
                 <p class="photo-list__post-title"><b>Антон</b> <span class="photo-list__post-time">(12 часов
@@ -116,7 +137,14 @@
           <li class="photo-list__item">
             <figure class="photo-list__photo-block">
               <a href="#" class="photo-list__photo">
-                <img src="img/photo-3.jpg" alt="Фото фасада стеклянного здания" width="280" height="180">
+                <picture>
+                  <source media="(min-width: 1200px)"
+                    srcset="img/catalog/photo-3-desktop.jpg 1x, img/catalog/photo-3-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)"
+                    srcset="img/catalog/photo-3-tablet.jpg 1x, img/catalog/photo-3-tablet@2x.jpg 2x">
+                  <img src="img/photo-3-mobile.jpg" srcset="img/catalog/photo-3-mobile.jpg 2x"
+                    alt="Фото фасада стеклянного здания" width="280" height="180">
+                </picture>
               </a>
               <figcaption class="photo-list__info">
                 <p class="photo-list__post-title"><b>Борис</b> <span class="photo-list__post-time">(20 часов
@@ -133,8 +161,14 @@
           <li class="photo-list__item">
             <figure class="photo-list__photo-block">
               <a href="#" class="photo-list__photo">
-                <img src="img/photo-4.jpg" alt="Фото мини-рынка арбузов и дынь под большим оранженым тентом" width="280"
-                  height="180">
+                <picture>
+                  <source media="(min-width: 1200px)"
+                    srcset="img/catalog/photo-4-desktop.jpg 1x, img/catalog/photo-4-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)"
+                    srcset="img/catalog/photo-4-tablet.jpg 1x, img/catalog/photo-4-tablet@2x.jpg 2x">
+                  <img src="img/photo-4-mobile.jpg" srcset="img/catalog/photo-4-mobile.jpg 2x"
+                    alt="Фото мини-рынка арбузов и дынь под большим оранженым тентом" width="280" height="180">
+                </picture>
               </a>
               <figcaption class="photo-list__info">
                 <p class="photo-list__post-title"><b>Сергей</b> <span class="photo-list__post-time">(25 часов
@@ -151,8 +185,14 @@
           <li class="photo-list__item">
             <figure class="photo-list__photo-block">
               <a href="#" class="photo-list__photo">
-                <img src="img/photo-5.jpg" alt="Селфи ног человека, сидяшего на камне в горах." width="280"
-                  height="180">
+                <picture>
+                  <source media="(min-width: 1200px)"
+                    srcset="img/catalog/photo-5-desktop.jpg 1x, img/catalog/photo-5-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)"
+                    srcset="img/catalog/photo-5-tablet.jpg 1x, img/catalog/photo-5-tablet@2x.jpg 2x">
+                  <img src="img/photo-5-mobile.jpg" srcset="img/catalog/photo-5-mobile.jpg 2x"
+                    alt="Селфи ног человека, сидяшего на камне в горах." width="280" height="180">
+                </picture>
               </a>
               <figcaption class="photo-list__info">
                 <p class="photo-list__post-title"><b>Максим</b> <span class="photo-list__post-time">(40 часов
@@ -169,7 +209,14 @@
           <li class="photo-list__item">
             <figure class="photo-list__photo-block">
               <a href="#" class="photo-list__photo">
-                <img src="img/photo-6.jpg" alt="Фото крыла самолета на фоне заходящего солнца" width="280" height="180">
+                <picture>
+                  <source media="(min-width: 1200px)"
+                    srcset="img/catalog/photo-6-desktop.jpg 1x, img/catalog/photo-6-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)"
+                    srcset="img/catalog/photo-6-tablet.jpg 1x, img/catalog/photo-6-tablet@2x.jpg 2x">
+                  <img src="img/photo-6-mobile.jpg" srcset="img/catalog/photo-6-mobile.jpg 2x"
+                    alt="Фото крыла самолета на фоне заходящего солнца" width="280" height="180">
+                </picture>
               </a>
               <figcaption class="photo-list__info">
                 <p class="photo-list__post-title"><b>Надежда</b> <span class="photo-list__post-time">(45 часов
@@ -192,8 +239,12 @@
       <h2 class="visually-hidden">Сделайте свой собственный пост</h2>
       <div class="content-wrapper post-block__container">
         <a href="#" class="post-block__photo">
-          <img class="post-block__image" src="img/post-photo.jpg" alt="Зимняя дорога, укрытая снегом и ведущая в закат"
-            width="280" height="374">
+          <picture>
+            <source media="(min-width: 1200px)"
+              srcset="img/catalog/post-photo-desktop.jpg 1x, img/catalog/post-photo-desktop@2x.jpg 2x">
+            <img class="post-block__image" src="img/catalog/post-photo.jpg" srcset="img/catalog/post-photo.jpg 2x"
+              alt="Зимняя дорога, укрытая снегом и ведущая в закат" width="280" height="374">
+          </picture>
         </a>
         <form method="POST" action="https://echo.htmlacademy.ru" class="post-block__form">
           <div class="post-block__range-container">
@@ -267,9 +318,11 @@
   </footer>
 
   <script>
+    const pageBody = document.querySelector(".page__body");
     const navMain = document.querySelector(".main-nav");
     const menuButton = navMain.querySelector(".main-nav__toggle");
 
+    pageBody.classList.remove("page__body--nojs");
     navMain.classList.remove("main-nav--nojs");
 
     menuButton.addEventListener('click', () => {

@@ -107,7 +107,7 @@
       position: absolute;
       top: auto;
       left: 20px;
-      bottom: -62px;
+      bottom: -64px;
       width: 268px;
       height: auto;
     }
@@ -115,6 +115,7 @@
 
   @include tablet {
     text-align: start;
+    align-items: flex-start;
   }
 
   @include desktop {
