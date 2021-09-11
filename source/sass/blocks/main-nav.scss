@@ -54,7 +54,7 @@
   justify-content: space-between;
   align-items: center;
 
-  padding: 21px 20px;
+  padding: 13px 20px;
 
   @include tablet {
     padding-top: 27px;
@@ -64,39 +64,45 @@
 
 .main-nav__logo {
   line-height: 0;
+  cursor: pointer;
+  overflow: hidden;
 }
 
 .main-nav__logo-icon {
-  display: none;
-  width: 147px;
-  height: 40px;
-  cursor: pointer;
+  color: $base-white;
+  fill: $base-white;
+  transform: translate(-71px, -8px);
 
   &:hover,
   &:focus {
-    path {
-      fill: $base-red;
-    }
+    color: $base-red;
+    fill: $base-red;
   }
 
   &:active {
-    path {
-      fill: $base-white;
-      opacity: 0.3;
-    }
+    color: $base-white;
+    fill: $base-white;
+    opacity: 0.3;
   }
 
   @include tablet {
-    display: inline;
+    transform: translate(0, 0);
   }
 
-  &--mobile {
-    display: inline;
-    width: auto;
-    height: auto;
+  @include desktop {
+    display: none;
+  }
 
-    @include tablet {
-      display: none;
+  &--desktop {
+    display: none;
+    fill: $base-red;
+
+    &:active {
+      fill: $base-red;
+    }
+
+    @include desktop {
+      display: block;
     }
   }
 }

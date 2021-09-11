@@ -34,6 +34,8 @@
 
 .reviews-slider__button {
   display: none;
+  color: $base-text;
+  opacity: 0.3;
 
   @include desktop {
     display: flex;
@@ -58,16 +60,12 @@
       padding-top: 39px;
     }
 
-    path {
-      opacity: 0.3;
-    }
-
-    &:hover path,
-    &:focus path {
+    &:hover,
+    &:focus {
       opacity: 0.6;
     }
 
-    &:active path {
+    &:active {
       opacity: 0.1;
     }
   }
