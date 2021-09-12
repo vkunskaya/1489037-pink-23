@@ -220,6 +220,7 @@
 }
 
 .post-block__submit-button {
+  flex: none;
   width: 100%;
 
   @include tablet {
