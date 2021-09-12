@@ -64,6 +64,7 @@
   @include tablet {
     font-size: 30px;
     line-height: 36px;
+    word-break: break-all;
   }
 
   @include desktop {

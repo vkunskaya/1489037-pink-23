@@ -76,6 +76,7 @@
   background-color: $base-dark-background;
 
   @include tablet {
+    margin-bottom: 32px;
     width: 100%;
     justify-content: flex-start;
     background-color: $base-transparent;
