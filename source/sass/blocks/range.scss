@@ -29,6 +29,11 @@
 
   &:focus {
     outline: none;
+
+    &::-webkit-slider-thumb {
+      outline: 1px solid $base-background;
+      box-shadow: 0 0 8px $base-red;
+    }
   }
 
   &::-webkit-slider-runnable-track {

@@ -145,7 +145,8 @@
     }
 
     @include desktop {
-      min-height: calc(100vw * 0.42);
+      min-height: unset;
+      height: 502px;
     }
   }
 }
