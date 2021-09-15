@@ -17,7 +17,7 @@
     top: 0;
     left: 0;
     z-index: -1;
-    width: 100vw;
+    width: 100%;
     height: 1000px;
     background: url("../img/back-mobile.jpg") top no-repeat;
     background-color: $base-background;
@@ -37,7 +37,7 @@
 
     @include desktop {
       background-image: url("../img/back-desktop.jpg");
-      background-size: 100% 823px;
+      background-size: 100% 853px;
 
 
       @media (min-resolution: 2dppx) {
